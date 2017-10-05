@@ -1,5 +1,5 @@
-#Metadata Navigator 
-#==================
+# Metadata Navigator 
+# ==================
 
 Use this tool to navigate and query your AWS EC2 instance's metadata.
 
@@ -57,12 +57,6 @@ cd mnavigator/
 pip -r requirements.txt 
 chmod +x mnavigator
 ```
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Authors
 
