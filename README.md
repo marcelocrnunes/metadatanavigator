@@ -52,7 +52,7 @@ termcolor==1.1.0
 
 ```
 git clone https://github.com/marcelocrnunes/metadatanavigator.git
-cd mnavigator/
+cd metadatanavigator/
 pip -r requirements.txt 
 chmod +x mnavigator
 ```
