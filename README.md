@@ -1,5 +1,4 @@
 # Metadata Navigator 
-# ==================
 
 Use this tool to navigate and query your AWS EC2 instance's metadata.
 
