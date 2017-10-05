@@ -1,0 +1,2330 @@
+{
+  "version": 1,
+  "width": 237,
+  "height": 59,
+  "duration": 242.981217,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "screen",
+    "SHELL": "/bin/bash"
+  },
+  "stdout": [
+    [
+      0.014346,
+      "\u001b]0;ec2-user@ip-172-31-45-231:~/metadatacli/metadatacli\u001b\\"
+    ],
+    [
+      0.00042,
+      "[ec2-user@ip-172-31-45-231 metadatacli]$ "
+    ],
+    [
+      3.515756,
+      "."
+    ],
+    [
+      0.081957,
+      "/"
+    ],
+    [
+      0.38008,
+      "m"
+    ],
+    [
+      0.207895,
+      "n"
+    ],
+    [
+      0.135297,
+      "avigator "
+    ],
+    [
+      1.463831,
+      "-"
+    ],
+    [
+      0.255854,
+      "h"
+    ],
+    [
+      1.672097,
+      "\r\n"
+    ],
+    [
+      0.250777,
+      "usage: mnavigator [-h] [-d] [-j] [-c] [-p [PATH]]\r\n\r\noptional arguments:\r\n  -h, --help            show this help message and exit\r\n  -d, --debug           Debug Mode\r\n  -j, --json            JSON output mode\r\n  -c, --color           COLOR output mode\r\n  -p [PATH], --path [PATH]\r\n                        Metadata PATH for pipe output mode [Disables\r\n"
+    ],
+    [
+      0.000394,
+      "                        INTERATIVE mode][DEFAULT ROOT]\r\n"
+    ],
+    [
+      0.011279,
+      "\u001b]0;ec2-user@ip-172-31-45-231:~/metadatacli/metadatacli\u001b\\"
+    ],
+    [
+      7.9e-05,
+      "[ec2-user@ip-172-31-45-231 metadatacli]$ "
+    ],
+    [
+      7.449812,
+      "./mnavigator -h"
+    ],
+    [
+      1.456083,
+      "\b\u001b[K"
+    ],
+    [
+      0.464102,
+      "p"
+    ],
+    [
+      0.599703,
+      "\r\n"
+    ],
+    [
+      0.266665,
+      "\u001b[37m['ami-id', 'ami-launch-index', 'ami-manifest-path', 'block-device-mapping/', 'hostname', 'iam/', 'instance-action', 'instance-id', 'instance-type', 'local-hostname', 'local-ipv4', 'mac', 'metrics/', 'network/', 'placement/', 'profile', 'public-hostname', 'public-ipv4', 'public-keys/', 'reservation-id', 'security-groups', 'services/']\u001b[0m\r\n"
+    ],
+    [
+      0.012508,
+      "\u001b]0;ec2-user@ip-172-31-45-231:~/metadatacli/metadatacli\u001b\\[ec2-user@ip-172-31-45-231 metadatacli]$ "
+    ],
+    [
+      3.162563,
+      "./mnavigator -p"
+    ],
+    [
+      0.526921,
+      "\b"
+    ],
+    [
+      1.423955,
+      "cp\b"
+    ],
+    [
+      0.119774,
+      "\r\n"
+    ],
+    [
+      0.267843,
+      "\u001b[32m['ami-id', 'ami-launch-index', 'ami-manifest-path', 'block-device-mapping/', 'hostname', 'iam/', 'instance-action', 'instance-id', 'instance-type', 'local-hostname', 'local-ipv4', 'mac', 'metrics/', 'network/', 'placement/', 'profile', 'public-hostname', 'public-ipv4', 'public-keys/', 'reservation-id', 'security-groups', 'services/']\u001b[0m\r\n"
+    ],
+    [
+      0.01252,
+      "\u001b]0;ec2-user@ip-172-31-45-231:~/metadatacli/metadatacli\u001b\\"
+    ],
+    [
+      0.000378,
+      "[ec2-user@ip-172-31-45-231 metadatacli]$ "
+    ],
+    [
+      1.199624,
+      "./mnavigator -cp"
+    ],
+    [
+      0.632163,
+      "\b"
+    ],
+    [
+      1.224026,
+      "jp\b"
+    ],
+    [
+      1.609082,
+      "\r\n"
+    ],
+    [
+      0.266766,
+      "{\r\n    \u001b[34;01m\"/\"\u001b[39;49;00m: [\r\n        \u001b[33m\"ami-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"ami-launch-index\"\u001b[39;49;00m, \r\n        \u001b[33m\"ami-manifest-path\"\u001b[39;49;00m, \r\n        \u001b[33m\"block-device-mapping/\"\u001b[39;49;00m, \r\n        \u001b[33m\"hostname\"\u001b[39;49;00m, \r\n        \u001b[33m\"iam/\"\u001b[39;49;00m, \r\n"
+    ],
+    [
+      0.000304,
+      "        \u001b[33m\"instance-action\"\u001b[39;49;00m, \r\n        \u001b[33m\"instance-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"instance-type\"\u001b[39;49;00m, \r\n        \u001b[33m\"local-hostname\"\u001b[39;49;00m, \r\n        \u001b[33m\"local-ipv4\"\u001b[39;49;00m, \r\n        \u001b[33m\"mac\"\u001b[39;49;00m, \r\n        \u001b[33m\"metrics/\"\u001b[39;49;00m, \r\n        \u001b[33m\"network/\"\u001b[39;49;00m, \r\n        \u001b[33m\"placement/\"\u001b[39;49;00m, \r\n        \u001b[33m\"profile\"\u001b[39;49;00m, \r\n        \u001b[33m\"public-hostname\"\u001b[39;49;00m, \r\n        \u001b[33m\"public-ipv4\"\u001b[39;49;00m, \r\n        \u001b[33m\"public-keys/\"\u001b[39;49;00m, \r\n        \u001b[33m\"reservation-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"security-groups\"\u001b[39;49;00m, \r\n        \u001b[33m\"services/\"\u001b[39;49;00m\r\n    ]\r\n}\r\n\r\n"
+    ],
+    [
+      0.012273,
+      "\u001b]0;ec2-user@ip-172-31-45-231:~/metadatacli/metadatacli\u001b\\"
+    ],
+    [
+      0.000371,
+      "[ec2-user@ip-172-31-45-231 metadatacli]$ "
+    ],
+    [
+      2.735007,
+      "./mnavigator -cjp"
+    ],
+    [
+      1.153141,
+      " "
+    ],
+    [
+      0.183115,
+      "a"
+    ],
+    [
+      0.175853,
+      "m"
+    ],
+    [
+      0.136862,
+      "i"
+    ],
+    [
+      0.503005,
+      "-"
+    ],
+    [
+      0.274919,
+      "i"
+    ],
+    [
+      0.181617,
+      "d"
+    ],
+    [
+      2.024733,
+      "\r\n"
+    ],
+    [
+      0.265939,
+      "{\r\n    \u001b[34;01m\"ami-id\"\u001b[39;49;00m: [\r\n        \u001b[33m\"ami-e7527ed7\"\u001b[39;49;00m\r\n    ]\r\n}\r\n\r\n"
+    ],
+    [
+      0.012396,
+      "\u001b]0;ec2-user@ip-172-31-45-231:~/metadatacli/metadatacli\u001b\\"
+    ],
+    [
+      0.000385,
+      "[ec2-user@ip-172-31-45-231 metadatacli]$ "
+    ],
+    [
+      1.208533,
+      "./mnavigator -cjp ami-id"
+    ],
+    [
+      0.55991,
+      "\b\u001b[K"
+    ],
+    [
+      0.191806,
+      "\b\u001b[K"
+    ],
+    [
+      0.168432,
+      "\b\u001b[K"
+    ],
+    [
+      0.199852,
+      "\b\u001b[K"
+    ],
+    [
+      0.856333,
+      "\b\u001b[K"
+    ],
+    [
+      0.199774,
+      "\b\u001b[K"
+    ],
+    [
+      0.799942,
+      "n"
+    ],
+    [
+      0.135952,
+      "e"
+    ],
+    [
+      0.255644,
+      "t"
+    ],
+    [
+      0.320589,
+      "w"
+    ],
+    [
+      0.351938,
+      "o"
+    ],
+    [
+      0.215957,
+      "r"
+    ],
+    [
+      0.240033,
+      "k"
+    ],
+    [
+      3.312222,
+      "/"
+    ],
+    [
+      0.392032,
+      "i"
+    ],
+    [
+      0.047941,
+      "n"
+    ],
+    [
+      0.159903,
+      "t"
+    ],
+    [
+      0.103984,
+      "e"
+    ],
+    [
+      0.200167,
+      "r"
+    ],
+    [
+      0.320967,
+      "f"
+    ],
+    [
+      0.263427,
+      "a"
+    ],
+    [
+      0.19154,
+      "c"
+    ],
+    [
+      0.111988,
+      "e"
+    ],
+    [
+      0.215938,
+      "s"
+    ],
+    [
+      0.392066,
+      "/"
+    ],
+    [
+      0.303962,
+      "\r\n"
+    ],
+    [
+      0.266497,
+      "{\r\n    \u001b[34;01m\"network/interfaces/\"\u001b[39;49;00m: [\r\n        \u001b[33m\"macs/\"\u001b[39;49;00m\r\n    ]\r\n}\r\n\r\n"
+    ],
+    [
+      0.012783,
+      "\u001b]0;ec2-user@ip-172-31-45-231:~/metadatacli/metadatacli\u001b\\[ec2-user@ip-172-31-45-231 metadatacli]$ "
+    ],
+    [
+      1.217172,
+      "./mnavigator -cjp network/interfaces/"
+    ],
+    [
+      0.743929,
+      "m"
+    ],
+    [
+      0.04788,
+      "a"
+    ],
+    [
+      0.415851,
+      "c"
+    ],
+    [
+      0.3282,
+      "s"
+    ],
+    [
+      0.49601,
+      "/"
+    ],
+    [
+      0.160022,
+      "\r\n"
+    ],
+    [
+      0.270445,
+      "{\r\n    \u001b[34;01m\"network/interfaces/macs/\"\u001b[39;49;00m: [\r\n        \u001b[33m\"06:ac:75:63:de:03/\"\u001b[39;49;00m\r\n    ]\r\n}\r\n\r\n"
+    ],
+    [
+      0.012643,
+      "\u001b]0;ec2-user@ip-172-31-45-231:~/metadatacli/metadatacli\u001b\\[ec2-user@ip-172-31-45-231 metadatacli]$ "
+    ],
+    [
+      1.364831,
+      "./mnavigator -cjp network/interfaces/macs/"
+    ],
+    [
+      6.552585,
+      "0"
+    ],
+    [
+      0.456314,
+      "6"
+    ],
+    [
+      1.264786,
+      ":"
+    ],
+    [
+      0.143007,
+      "a"
+    ],
+    [
+      0.336326,
+      "z"
+    ],
+    [
+      0.431573,
+      "\b\u001b[K"
+    ],
+    [
+      0.119848,
+      "c"
+    ],
+    [
+      1.409834,
+      ":"
+    ],
+    [
+      0.770973,
+      "7"
+    ],
+    [
+      0.5878,
+      "5"
+    ],
+    [
+      0.727652,
+      ":"
+    ],
+    [
+      0.808468,
+      "6"
+    ],
+    [
+      0.21861,
+      "3"
+    ],
+    [
+      1.245574,
+      ":"
+    ],
+    [
+      0.424049,
+      "d"
+    ],
+    [
+      0.129299,
+      "e"
+    ],
+    [
+      0.542224,
+      ":"
+    ],
+    [
+      1.528174,
+      "0"
+    ],
+    [
+      0.327921,
+      "3"
+    ],
+    [
+      0.464281,
+      "/"
+    ],
+    [
+      0.632199,
+      "\r\n"
+    ],
+    [
+      0.267878,
+      "{\r\n    \u001b[34;01m\"network/interfaces/macs/06:ac:75:63:de:03/\"\u001b[39;49;00m: [\r\n        \u001b[33m\"device-number\"\u001b[39;49;00m, \r\n        \u001b[33m\"interface-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"ipv4-associations/\"\u001b[39;49;00m, \r\n        \u001b[33m\"local-hostname\"\u001b[39;49;00m, \r\n        \u001b[33m\"local-ipv4s\"\u001b[39;49;00m, \r\n        \u001b[33m\"mac\"\u001b[39;49;00m, \r\n        \u001b[33m\"owner-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"public-hostname\"\u001b[39;49;00m, \r\n        \u001b[33m\"public-ipv4s\"\u001b[39;49;00m, \r\n        \u001b[33m\"security-group-ids\"\u001b[39;49;00m, \r\n        \u001b[33m\"security-groups\"\u001b[39;49;00m, \r\n        \u001b[33m\"subnet-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"subnet-ipv4-cidr-block\"\u001b[39;49;00m, \r\n        \u001b[33m\"vpc-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"vpc-ipv4-cidr-block\"\u001b[39;49;00m, \r\n        \u001b[33m\"vpc-ipv4-cidr-blocks\"\u001b[39;49;00m\r\n    ]\r\n}\r\n\r\n"
+    ],
+    [
+      0.012629,
+      "\u001b]0;ec2-user@ip-172-31-45-231:~/metadatacli/metadatacli\u001b\\[ec2-user@ip-172-31-45-231 metadatacli]$ "
+    ],
+    [
+      1.470942,
+      "./mnavigator -cjp network/interfaces/macs/06:ac:75:63:de:03/"
+    ],
+    [
+      2.264477,
+      "s"
+    ],
+    [
+      0.187886,
+      "u"
+    ],
+    [
+      0.187955,
+      "b"
+    ],
+    [
+      0.22024,
+      "n"
+    ],
+    [
+      0.141807,
+      "e"
+    ],
+    [
+      0.217957,
+      "t"
+    ],
+    [
+      0.294349,
+      "-"
+    ],
+    [
+      0.259859,
+      "i"
+    ],
+    [
+      0.157716,
+      "d"
+    ],
+    [
+      0.485353,
+      "\r\n"
+    ],
+    [
+      0.265345,
+      "{\r\n    \u001b[34;01m\"network/interfaces/macs/06:ac:75:63:de:03/subnet-id\"\u001b[39;49;00m: [\r\n        \u001b[33m\"subnet-a663dbd1\"\u001b[39;49;00m\r\n    ]\r\n}\r\n\r\n"
+    ],
+    [
+      0.012556,
+      "\u001b]0;ec2-user@ip-172-31-45-231:~/metadatacli/metadatacli\u001b\\[ec2-user@ip-172-31-45-231 metadatacli]$ "
+    ],
+    [
+      2.913106,
+      "./mnavigator -cjp network/interfaces/macs/06:ac:75:63:de:03/subnet-id"
+    ],
+    [
+      0.552006,
+      "\r\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C"
+    ],
+    [
+      0.279773,
+      "\u001b[C"
+    ],
+    [
+      0.501294,
+      "\u001b[C"
+    ],
+    [
+      0.031881,
+      "\u001b[C"
+    ],
+    [
+      0.034646,
+      "\u001b[C"
+    ],
+    [
+      0.032093,
+      "\u001b[C"
+    ],
+    [
+      0.032696,
+      "\u001b[C"
+    ],
+    [
+      0.033112,
+      "\u001b[C"
+    ],
+    [
+      0.033086,
+      "\u001b[C"
+    ],
+    [
+      0.032257,
+      "\u001b[C"
+    ],
+    [
+      0.033727,
+      "\u001b[C"
+    ],
+    [
+      0.033481,
+      "\u001b[C"
+    ],
+    [
+      0.032157,
+      "\u001b[C"
+    ],
+    [
+      0.034433,
+      "\u001b[C"
+    ],
+    [
+      0.031972,
+      "\u001b[C"
+    ],
+    [
+      0.743661,
+      "\u001b[1P"
+    ],
+    [
+      0.512758,
+      "\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C"
+    ],
+    [
+      1.648565,
+      "\b\u001b[K"
+    ],
+    [
+      0.254519,
+      "\b\u001b[K"
+    ],
+    [
+      0.191823,
+      "\b\u001b[K"
+    ],
+    [
+      0.193134,
+      "\b\u001b[K"
+    ],
+    [
+      0.207098,
+      "\b\u001b[K"
+    ],
+    [
+      0.184246,
+      "\b\u001b[K"
+    ],
+    [
+      0.311544,
+      "\b\u001b[K"
+    ],
+    [
+      0.224,
+      "\b\u001b[K"
+    ],
+    [
+      2.01678,
+      "e"
+    ],
+    [
+      0.272014,
+      "c"
+    ],
+    [
+      0.272608,
+      "u"
+    ],
+    [
+      0.198691,
+      "r"
+    ],
+    [
+      0.136099,
+      "i"
+    ],
+    [
+      0.184665,
+      "t"
+    ],
+    [
+      0.151555,
+      "y"
+    ],
+    [
+      0.320812,
+      "-"
+    ],
+    [
+      0.3033,
+      "g"
+    ],
+    [
+      0.247709,
+      "r"
+    ],
+    [
+      0.76098,
+      "u"
+    ],
+    [
+      0.655295,
+      "\b\u001b[K"
+    ],
+    [
+      0.304106,
+      "o"
+    ],
+    [
+      0.223804,
+      "u"
+    ],
+    [
+      0.256303,
+      "p"
+    ],
+    [
+      0.103592,
+      "s"
+    ],
+    [
+      0.424577,
+      "\r\n"
+    ],
+    [
+      0.26727,
+      "{\r\n    \"network/interfaces/macs/06:ac:75:63:de:03/security-groups\": [\r\n        \"default\"\r\n    ]\r\n}\r\n"
+    ],
+    [
+      0.012667,
+      "\u001b]0;ec2-user@ip-172-31-45-231:~/metadatacli/metadatacli\u001b\\[ec2-user@ip-172-31-45-231 metadatacli]$ "
+    ],
+    [
+      3.263814,
+      "./mnavigator -jp network/interfaces/macs/06:ac:75:63:de:03/security-groups"
+    ],
+    [
+      0.584162,
+      "\r\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C"
+    ],
+    [
+      0.351695,
+      "\u001b[C"
+    ],
+    [
+      0.500787,
+      "\u001b[C"
+    ],
+    [
+      0.031948,
+      "\u001b[C"
+    ],
+    [
+      0.033685,
+      "\u001b[C"
+    ],
+    [
+      0.033159,
+      "\u001b[C"
+    ],
+    [
+      0.032496,
+      "\u001b[C"
+    ],
+    [
+      0.033749,
+      "\u001b[C"
+    ],
+    [
+      0.036144,
+      "\u001b[C"
+    ],
+    [
+      0.030494,
+      "\u001b[C"
+    ],
+    [
+      0.031922,
+      "\u001b[C"
+    ],
+    [
+      0.035443,
+      "\u001b[C"
+    ],
+    [
+      0.832462,
+      "\u001b[C"
+    ],
+    [
+      0.225879,
+      "\u001b[C"
+    ],
+    [
+      0.174312,
+      "\u001b[C"
+    ],
+    [
+      0.616246,
+      "\u001b[1P"
+    ],
+    [
+      0.327786,
+      "\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C"
+    ],
+    [
+      1.65594,
+      "\b\u001b[K"
+    ],
+    [
+      0.500206,
+      "\b\u001b[K"
+    ],
+    [
+      0.033298,
+      "\b\u001b[K"
+    ],
+    [
+      0.032408,
+      "\b\u001b[K"
+    ],
+    [
+      0.03385,
+      "\b\u001b[K"
+    ],
+    [
+      0.032524,
+      "\b\u001b[K"
+    ],
+    [
+      0.032564,
+      "\b\u001b[K"
+    ],
+    [
+      0.032975,
+      "\b\u001b[K"
+    ],
+    [
+      0.032866,
+      "\b\u001b[K"
+    ],
+    [
+      0.035802,
+      "\b\u001b[K"
+    ],
+    [
+      0.030337,
+      "\b\u001b[K"
+    ],
+    [
+      0.643231,
+      "\b\u001b[K"
+    ],
+    [
+      0.18407,
+      "\b\u001b[K"
+    ],
+    [
+      0.183778,
+      "\b\u001b[K"
+    ],
+    [
+      0.720004,
+      "\b\u001b[K"
+    ],
+    [
+      0.392384,
+      "v"
+    ],
+    [
+      0.287784,
+      "p"
+    ],
+    [
+      0.224039,
+      "c"
+    ],
+    [
+      0.912152,
+      "-"
+    ],
+    [
+      0.263747,
+      "i"
+    ],
+    [
+      0.120019,
+      "d"
+    ],
+    [
+      0.848087,
+      "\r\n"
+    ],
+    [
+      0.264841,
+      "\u001b[37mnetwork/interfaces/macs/06:ac:75:63:de:03/vpc-id:\u001b[0m \u001b[37mvpc-e7870582\u001b[0m\r\n"
+    ],
+    [
+      0.012472,
+      "\u001b]0;ec2-user@ip-172-31-45-231:~/metadatacli/metadatacli\u001b\\"
+    ],
+    [
+      0.000543,
+      "[ec2-user@ip-172-31-45-231 metadatacli]$ "
+    ],
+    [
+      7.402815,
+      "."
+    ],
+    [
+      0.272115,
+      "/"
+    ],
+    [
+      1.191481,
+      "m"
+    ],
+    [
+      0.344556,
+      "n"
+    ],
+    [
+      0.976104,
+      "a"
+    ],
+    [
+      0.657846,
+      "v"
+    ],
+    [
+      0.09378,
+      "i"
+    ],
+    [
+      0.202188,
+      "gator "
+    ],
+    [
+      6.030081,
+      "-"
+    ],
+    [
+      0.112102,
+      "h"
+    ],
+    [
+      0.143782,
+      "\r\n"
+    ],
+    [
+      0.262502,
+      "usage: mnavigator [-h] [-d] [-j] [-c] [-p [PATH]]\r\n\r\noptional arguments:\r\n  -h, --help            show this help message and exit\r\n  -d, --debug           Debug Mode\r\n  -j, --json            JSON output mode\r\n  -c, --color           COLOR output mode\r\n  -p [PATH], --path [PATH]\r\n                        Metadata PATH for pipe output mode [Disables\r\n"
+    ],
+    [
+      0.000399,
+      "                        INTERATIVE mode][DEFAULT ROOT]\r\n"
+    ],
+    [
+      0.01163,
+      "\u001b]0;ec2-user@ip-172-31-45-231:~/metadatacli/metadatacli\u001b\\[ec2-user@ip-172-31-45-231 metadatacli]$ "
+    ],
+    [
+      1.04573,
+      "c"
+    ],
+    [
+      0.728221,
+      "l"
+    ],
+    [
+      0.175875,
+      "e"
+    ],
+    [
+      0.223958,
+      "a"
+    ],
+    [
+      0.177003,
+      "r"
+    ],
+    [
+      0.343372,
+      "\r\n"
+    ],
+    [
+      0.000891,
+      "\u001b[H\u001b[J"
+    ],
+    [
+      0.00021,
+      "\u001b]0;ec2-user@ip-172-31-45-231:~/metadatacli/metadatacli\u001b\\"
+    ],
+    [
+      0.000487,
+      "[ec2-user@ip-172-31-45-231 metadatacli]$ "
+    ],
+    [
+      0.838159,
+      "."
+    ],
+    [
+      0.376153,
+      "/"
+    ],
+    [
+      0.399905,
+      "m"
+    ],
+    [
+      0.247772,
+      "n"
+    ],
+    [
+      0.273468,
+      "avigator "
+    ],
+    [
+      0.839234,
+      "\r\n"
+    ],
+    [
+      0.265354,
+      "\u001b[1m\u001b[37mMetadata Navigator\r\n===================\u001b[0m\r\n"
+    ],
+    [
+      0.000211,
+      "\u001b[37m\r\nINTERATIVE MODE:\r\nPress ENTER, l, or list to view available metadata options. \r\nEnter metadata name to view it's current value.\r\nEnter path name with trailling slash to navigate further on the categories\r\nEnter \"b\" or \"back\" to go back to previous metadata category \r\nEnter \"r\" or \"reset\" to go to root path\r\nEnter \"c\" or \"clear\" to clear the screen\r\nEnter \"q\" or \"quit\" to quit. \r\nPress \"Ctrl-t\" to toggle json mode (-j option on the commandline)\r\nPress \"Ctrl-y\" to toggle color mode (-c option on the commandline)\r\n\r\nPIPE MODE: \r\nCall the command with the \"-p\" argument. Call the command with \"-h\" for usage help. \r\n\r\n     \u001b[0m\r\n"
+    ],
+    [
+      0.00335,
+      "\u001b[?1l"
+    ],
+    [
+      3.1e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.003807,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.021913,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1;7m[color] \u001b[0;38;5;236;48;5;15;1;7m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[39A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      3.027433,
+      "\u001b[?25l\u001b[?7l\u001b[0ml\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.019565,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241mocal-hostname\u001b[0m\r\r\n\u001b[24C\u001b[0;38;5;0;48;5;250m local-hostname \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[24C\u001b[0;38;5;0;48;5;250m local-ipv4     \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[24C\u001b[0;38;5;0;48;5;250m l              \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[24C\u001b[0;38;5;0;48;5;250m list           \u001b[0;48;5;238m \u001b[4A\u001b[17D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.509028,
+      "\u001b[?25l\u001b[?7l\u001b[24D\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/]> \u001b[0ml\u001b[24D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000384,
+      "\u001b[?2004l"
+    ],
+    [
+      0.00014,
+      "\u001b[37m['ami-id', 'ami-launch-index', 'ami-manifest-path', 'block-device-mapping/', 'hostname', 'iam/', 'instance-action', 'instance-id', 'instance-type', 'local-hostname', 'local-ipv4', 'mac', 'metrics/', 'network/', 'placement/', 'profile', 'public-hostname', 'public-ipv4', 'public-keys/', 'reservation-id', 'security-groups', 'services/', 'q', 'quit', 'l', 'list', '', 'b', 'back', 'r', 'reset', 'c', 'clear']\u001b[0m\r\n"
+    ],
+    [
+      0.00199,
+      "\u001b[?1l"
+    ],
+    [
+      4.7e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.002815,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.011494,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n"
+    ],
+    [
+      4.9e-05,
+      "\u001b[0;38;5;236;48;5;15;1;7m[color] \u001b[0;38;5;236;48;5;15;1;7m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[36A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      2.582787,
+      "\u001b[?25l\u001b[?7l\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.0116,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-id                \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-launch-index      \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-manifest-path     \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m block-device-mapping/ \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m hostname              \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m iam/                  \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m instance-action       \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m instance-id           \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m instance-type         \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m local-hostname        \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m local-ipv4            \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m mac                   \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m metrics/              \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m network/              \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m placement/    "
+    ],
+    [
+      3.1e-05,
+      "        \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m profile               \u001b[0;48;5;102m \u001b[16A\u001b[24D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.869008,
+      "\u001b[?25l\u001b[?7l\u001b[0ma\u001b[0mm\u001b[0mi\u001b[0m-\u001b[0mi\u001b[0md\u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m ami-id                \u001b[A\u001b[17D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.96698,
+      "\u001b[?25l\u001b[?7l\u001b[2D\u001b[0ml\u001b[0ma\u001b[0mu\u001b[0mn\u001b[0mc\u001b[0mh\u001b[0m-\u001b[0mi\u001b[0mn\u001b[0md\u001b[0me\u001b[0mx\u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-id                \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m ami-launch-index      \u001b[2A\u001b[7D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.207862,
+      "\u001b[?25l\u001b[?7l\u001b[12D\u001b[0mm\u001b[C\u001b[0mn\u001b[0mi\u001b[0mf\u001b[0me\u001b[0ms\u001b[0mt\u001b[0m-\u001b[0mp\u001b[0ma\u001b[0mt\u001b[0mh\u001b[0m\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-launch-index      \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m ami-manifest-path     \u001b[3A\u001b[6D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.207285,
+      "\u001b[?25l\u001b[?7l\u001b[17D\u001b[0mb\u001b[0ml\u001b[0mo\u001b[0mc\u001b[0mk\u001b[0m-\u001b[0md\u001b[0me\u001b[0mv\u001b[0mi\u001b[0mc\u001b[0me\u001b[C\u001b[0mm\u001b[C\u001b[0mp\u001b[0mp\u001b[0mi\u001b[0mn\u001b[0mg\u001b[0m/\u001b[0m\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-manifest-path     \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m block-device-mapping/ \u001b[4A\u001b[2D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.713626,
+      "\u001b[?25l\u001b[?7l\u001b[21D\u001b[0ma\u001b[0mm\u001b[0mi\u001b[0m-\u001b[0mm\u001b[0ma\u001b[0mn\u001b[0mi\u001b[0mf\u001b[0me\u001b[0ms\u001b[0mt\u001b[C\u001b[0mp\u001b[C\u001b[0mt\u001b[0mh\u001b[0m    \u001b[0m\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m ami-manifest-path     \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m block-device-mapping/ \u001b[4A\u001b[6D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.719204,
+      "\u001b[?25l\u001b[?7l\u001b[40D\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/]> \u001b[0ma\u001b[0mm\u001b[0mi\u001b[0m-\u001b[0mm\u001b[0ma\u001b[0mn\u001b[0mi\u001b[0mf\u001b[0me\u001b[0ms\u001b[0mt\u001b[0m-\u001b[0mp\u001b[0ma\u001b[0mt\u001b[0mh\u001b[40D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000259,
+      "\u001b[?2004l"
+    ],
+    [
+      0.002076,
+      "\u001b[37mami-manifest-path\u001b[0m: \u001b[37m(unknown)\u001b[0m\r\n"
+    ],
+    [
+      0.0019,
+      "\u001b[?1l"
+    ],
+    [
+      4.5e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.002753,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.01009,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1;7m[color] \u001b[0;38;5;236;48;5;15;1;7m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[34A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.862861,
+      "\u001b[?25l\u001b[?7l\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.010686,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-id                \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-launch-index      \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-manifest-path     \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m block-device-mapping/ \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m hostname              \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m iam/                  \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m instance-action       \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m instance-id           \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m instance-type         \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m local-hostname        \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m local-ipv4            \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m mac                   \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m metrics/              \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m network/              \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m placement/    "
+    ],
+    [
+      3.2e-05,
+      "        \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m profile               \u001b[0;48;5;102m \u001b[16A\u001b[24D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.645874,
+      "\u001b[?25l\u001b[?7l\u001b[0ma\u001b[0mm\u001b[0mi\u001b[0m-\u001b[0mi\u001b[0md\u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m ami-id                \u001b[A\u001b[17D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.215111,
+      "\u001b[?25l\u001b[?7l\u001b[2D\u001b[0ml\u001b[0ma\u001b[0mu\u001b[0mn\u001b[0mc\u001b[0mh\u001b[0m-\u001b[0mi\u001b[0mn\u001b[0md\u001b[0me\u001b[0mx\u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-id                \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m ami-launch-index      \u001b[2A\u001b[7D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.200462,
+      "\u001b[?25l\u001b[?7l\u001b[12D\u001b[0mm\u001b[C\u001b[0mn\u001b[0mi\u001b[0mf\u001b[0me\u001b[0ms\u001b[0mt\u001b[0m-\u001b[0mp\u001b[0ma\u001b[0mt\u001b[0mh\u001b[0m\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-launch-index      \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m ami-manifest-path     \u001b[3A\u001b[6D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.183477,
+      "\u001b[?25l\u001b[?7l\u001b[17D\u001b[0mb\u001b[0ml\u001b[0mo\u001b[0mc\u001b[0mk\u001b[0m-\u001b[0md\u001b[0me\u001b[0mv\u001b[0mi\u001b[0mc\u001b[0me\u001b[C\u001b[0mm\u001b[C\u001b[0mp\u001b[0mp\u001b[0mi\u001b[0mn\u001b[0mg\u001b[0m/\u001b[0m\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-manifest-path     \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m block-device-mapping/ \u001b[4A\u001b[2D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.240245,
+      "\u001b[?25l\u001b[?7l\u001b[21D\u001b[0mh\u001b[0mo\u001b[0ms\u001b[0mt\u001b[0mn\u001b[0ma\u001b[0mm\u001b[C\u001b[0m             \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m block-device-mapping/ \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m hostname              \u001b[5A\u001b[15D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.293567,
+      "\u001b[?25l\u001b[?7l\u001b[8D\u001b[0mi\u001b[0ma\u001b[0mm\u001b[0m/\u001b[0m    \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m hostname              \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m iam/                  \u001b[6A\u001b[19D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.890672,
+      "\u001b[?25l\u001b[?7l\u001b[3D\u001b[0mn\u001b[0ms\u001b[0mt\u001b[0ma\u001b[0mn\u001b[0mc\u001b[0me\u001b[0m-\u001b[0ma\u001b[0mc\u001b[0mt\u001b[0mi\u001b[0mo\u001b[0mn\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m iam/                  \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m instance-action       \u001b[7A\u001b[8D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.760031,
+      "\u001b[?25l\u001b[?7l\u001b[6D\u001b[0mi\u001b[0md\u001b[0m    \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m instance-action       \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m instance-id           \u001b[8A\u001b[12D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.200161,
+      "\u001b[?25l\u001b[?7l\u001b[2D\u001b[0mt\u001b[0my\u001b[0mp\u001b[0me\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m instance-id           \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m instance-type         \u001b[9A\u001b[10D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.344937,
+      "\u001b[?25l\u001b[?7l\u001b[36D\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/]> \u001b[0mi\u001b[0mn\u001b[0ms\u001b[0mt\u001b[0ma\u001b[0mn\u001b[0mc\u001b[0me\u001b[0m-\u001b[0mt\u001b[0my\u001b[0mp\u001b[0me\u001b[36D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000307,
+      "\u001b[?2004l"
+    ],
+    [
+      0.002253,
+      "\u001b[37minstance-type\u001b[0m: \u001b[37mc4.large\u001b[0m\r\n"
+    ],
+    [
+      0.002062,
+      "\u001b[?1l"
+    ],
+    [
+      4.6e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.002961,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.010902,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1;7m[color] \u001b[0;38;5;236;48;5;15;1;7m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[32A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.050938,
+      "\u001b[?25l\u001b[?7l\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.010629,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-id                \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-launch-index      \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-manifest-path     \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m block-device-mapping/ \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m hostname              \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m iam/                  \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m instance-action       \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m instance-id           \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m instance-type         \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m local-hostname        \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m local-ipv4            \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m mac                   \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m metrics/              \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m network/              \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m placement/    "
+    ],
+    [
+      2e-05,
+      "        \u001b[0;48;5;102m \u001b[0m\r\r\n"
+    ],
+    [
+      0.000273,
+      "\u001b[23C\u001b[0;38;5;0;48;5;250m profile               \u001b[0;48;5;102m \u001b[16A\u001b[24D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.237972,
+      "\u001b[?25l\u001b[?7l\u001b[0ma\u001b[0mm\u001b[0mi\u001b[0m-\u001b[0mi\u001b[0md\u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m ami-id                \u001b[A\u001b[17D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.21605,
+      "\u001b[?25l\u001b[?7l\u001b[2D\u001b[0ml\u001b[0ma\u001b[0mu\u001b[0mn\u001b[0mc\u001b[0mh\u001b[0m-\u001b[0mi\u001b[0mn\u001b[0md\u001b[0me\u001b[0mx\u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-id                \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m ami-launch-index      \u001b[2A\u001b[7D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.183117,
+      "\u001b[?25l\u001b[?7l\u001b[12D\u001b[0mm\u001b[C\u001b[0mn\u001b[0mi\u001b[0mf\u001b[0me\u001b[0ms\u001b[0mt\u001b[0m-\u001b[0mp\u001b[0ma\u001b[0mt\u001b[0mh\u001b[0m\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-launch-index      \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m ami-manifest-path     \u001b[3A\u001b[6D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.201585,
+      "\u001b[?25l\u001b[?7l\u001b[17D\u001b[0mb\u001b[0ml\u001b[0mo\u001b[0mc\u001b[0mk\u001b[0m-\u001b[0md\u001b[0me\u001b[0mv\u001b[0mi\u001b[0mc\u001b[0me\u001b[C\u001b[0mm\u001b[C\u001b[0mp\u001b[0mp\u001b[0mi\u001b[0mn\u001b[0mg\u001b[0m/\u001b[0m\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m ami-manifest-path     \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m block-device-mapping/ \u001b[4A\u001b[2D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.191408,
+      "\u001b[?25l\u001b[?7l\u001b[21D\u001b[0mh\u001b[0mo\u001b[0ms\u001b[0mt\u001b[0mn\u001b[0ma\u001b[0mm\u001b[C\u001b[0m             \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m block-device-mapping/ \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m hostname              \u001b[5A\u001b[15D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.502858,
+      "\u001b[?25l\u001b[?7l\u001b[8D\u001b[0mi\u001b[0ma\u001b[0mm\u001b[0m/\u001b[0m    \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m hostname              \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m iam/                  \u001b[6A\u001b[19D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.029299,
+      "\u001b[?25l\u001b[?7l\u001b[3D\u001b[0mn\u001b[0ms\u001b[0mt\u001b[0ma\u001b[0mn\u001b[0mc\u001b[0me\u001b[0m-\u001b[0ma\u001b[0mc\u001b[0mt\u001b[0mi\u001b[0mo\u001b[0mn\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m iam/                  \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m instance-action       \u001b[7A\u001b[8D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.034204,
+      "\u001b[?25l\u001b[?7l\u001b[6D\u001b[0mi\u001b[0md\u001b[0m    \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m instance-action       \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m instance-id           \u001b[8A\u001b[12D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.033222,
+      "\u001b[?25l\u001b[?7l\u001b[2D\u001b[0mt\u001b[0my\u001b[0mp\u001b[0me\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m instance-id           \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m instance-type         \u001b[9A\u001b[10D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.031974,
+      "\u001b[?25l\u001b[?7l\u001b[13D\u001b[0ml\u001b[0mo\u001b[0mc\u001b[0ma\u001b[0ml\u001b[0m-\u001b[0mh\u001b[0mo\u001b[0ms\u001b[C\u001b[0mn\u001b[0ma\u001b[0mm\u001b[0me\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m instance-type         \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m local-hostname        \u001b[10A\u001b[9D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.032377,
+      "\u001b[?25l\u001b[?7l\u001b[8D\u001b[0mi\u001b[0mp\u001b[0mv\u001b[0m4\u001b[0m    \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m local-hostname        \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m local-ipv4            \u001b[11A\u001b[13D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.033812,
+      "\u001b[?25l\u001b[?7l\u001b[10D\u001b[0mm\u001b[0ma\u001b[C\u001b[0m       \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m local-ipv4            \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m mac                   \u001b[12A\u001b[20D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.032517,
+      "\u001b[?25l\u001b[?7l\u001b[2D\u001b[0me\u001b[0mt\u001b[0mr\u001b[0mi\u001b[0mc\u001b[0ms\u001b[0m/\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m mac                   \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m metrics/              \u001b[13A\u001b[15D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.032691,
+      "\u001b[?25l\u001b[?7l\u001b[8D\u001b[0mn\u001b[2C\u001b[0mw\u001b[0mo\u001b[0mr\u001b[0mk\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m metrics/              \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m network/              \u001b[14A\u001b[15D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.033139,
+      "\u001b[?25l\u001b[?7l\u001b[8D\u001b[0mp\u001b[0ml\u001b[0ma\u001b[0mc\u001b[0me\u001b[0mm\u001b[0me\u001b[0mn\u001b[0mt\u001b[0m/\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m network/              \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m placement/            \u001b[15A\u001b[13D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.70025,
+      "\u001b[?25l\u001b[?7l\u001b[10D\u001b[0mn\u001b[0me\u001b[0mt\u001b[0mw\u001b[0mo\u001b[0mr\u001b[0mk\u001b[0m/\u001b[0m  \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[23C\u001b[0;38;5;15;48;5;102m network/              \u001b[0m\r\r\n\u001b[23C\u001b[0;38;5;0;48;5;250m placement/            \u001b[15A\u001b[15D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.512339,
+      "\u001b[?25l\u001b[?7l\u001b[31D\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/]> \u001b[0mn\u001b[0me\u001b[0mt\u001b[0mw\u001b[0mo\u001b[0mr\u001b[0mk\u001b[0m/\u001b[31D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000208,
+      "\u001b[?2004l"
+    ],
+    [
+      0.004001,
+      "\u001b[?1l"
+    ],
+    [
+      8.5e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.002838,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[31C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.021795,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1;7m[color] \u001b[0;38;5;236;48;5;15;1;7m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[31A\u001b[31C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      3.139221,
+      "\u001b[?25l\u001b[?7l\u001b[0mi\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.007792,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241mnterfaces/\u001b[0m\r\r\n\u001b[32C\u001b[0;38;5;0;48;5;250m interfaces/ \u001b[0;48;5;238m \u001b[A\u001b[14D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.078909,
+      "\u001b[?25l\u001b[?7l\u001b[0mn\u001b[0m         \u001b[0m\r\r\n\u001b[32C\u001b[0m              \u001b[A\u001b[13D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.007348,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241mterfaces/\u001b[0m\r\r\n\u001b[33C\u001b[0;38;5;0;48;5;250m interfaces/ \u001b[0;48;5;238m \u001b[A\u001b[14D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.11195,
+      "\u001b[?25l\u001b[?7l\u001b[0mt\u001b[0m        \u001b[0m\r\r\n\u001b[33C\u001b[0m              \u001b[A\u001b[13D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.007345,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241merfaces/\u001b[0m\r\r\n\u001b[34C\u001b[0;38;5;0;48;5;250m interfaces/ \u001b[0;48;5;238m \u001b[A\u001b[14D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.263847,
+      "\u001b[?25l\u001b[?7l\u001b[0me\u001b[0mr\u001b[0mf\u001b[0ma\u001b[0mc\u001b[0me\u001b[0ms\u001b[0m/\u001b[0m\r\r\n\u001b[34C\u001b[0;38;5;15;48;5;102m interfaces/ \u001b[A\u001b[5D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.650632,
+      "\u001b[?25l\u001b[?7l\u001b[42D\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/]> \u001b[0mi\u001b[0mn\u001b[0mt\u001b[0me\u001b[0mr\u001b[0mf\u001b[0ma\u001b[0mc\u001b[0me\u001b[0ms\u001b[0m/\u001b[42D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000296,
+      "\u001b[?2004l"
+    ],
+    [
+      0.003527,
+      "\u001b[?1l"
+    ],
+    [
+      8.4e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.003097,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[42C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.009992,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1;7m[color] \u001b[0;38;5;236;48;5;15;1;7m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[30A\u001b[42C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.508975,
+      "\u001b[?25l\u001b[?7l\u001b[0mm\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.00779,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241macs/\u001b[0m\r\r\n\u001b[43C\u001b[0;38;5;0;48;5;250m macs/ \u001b[0;48;5;238m \u001b[A\u001b[8D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.119984,
+      "\u001b[?25l\u001b[?7l\u001b[0ma\u001b[0m   \u001b[0m\r\r\n\u001b[43C\u001b[0m        \u001b[A\u001b[7D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.006386,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241mcs/\u001b[0m\r\r\n\u001b[44C\u001b[0;38;5;0;48;5;250m macs/ \u001b[0;48;5;238m \u001b[A\u001b[8D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.19368,
+      "\u001b[?25l\u001b[?7l\u001b[0mc\u001b[0ms\u001b[0m/\u001b[0m\r\r\n\u001b[44C\u001b[0;38;5;15;48;5;102m macs/ \u001b[A\u001b[4D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.71467,
+      "\u001b[?25l\u001b[?7l\u001b[47D\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/]> \u001b[0mm\u001b[0ma\u001b[0mc\u001b[0ms\u001b[0m/\u001b[47D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000205,
+      "\u001b[?2004l"
+    ],
+    [
+      0.00372,
+      "\u001b[?1l"
+    ],
+    [
+      4.6e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.002981,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/macs/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[47C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.009902,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1;7m[color] \u001b[0;38;5;236;48;5;15;1;7m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[29A\u001b[47C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.534484,
+      "\u001b[?25l\u001b[?7l\u001b[0m0\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.007608,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241m6:ac:75:63:de:03/\u001b[0m\r\r\n\u001b[48C\u001b[0;38;5;0;48;5;250m 06:ac:75:63:de:03/ \u001b[0;48;5;238m \u001b[A\u001b[21D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.078366,
+      "\u001b[?25l\u001b[?7l\u001b[0m6\u001b[0m:\u001b[0ma\u001b[0mc\u001b[0m:\u001b[0m7\u001b[0m5\u001b[0m:\u001b[0m6\u001b[0m3\u001b[0m:\u001b[0md\u001b[0me\u001b[0m:\u001b[0m0\u001b[0m3\u001b[0m/\u001b[0m\r\r\n\u001b[48C\u001b[0;38;5;15;48;5;102m 06:ac:75:63:de:03/ \u001b[A\u001b[3D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.571261,
+      "\u001b[?25l\u001b[?7l\u001b[65D\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/macs/]> \u001b[0m0\u001b[0m6\u001b[0m:\u001b[0ma\u001b[0mc\u001b[0m:\u001b[0m7\u001b[0m5\u001b[0m:\u001b[0m6\u001b[0m3\u001b[0m:\u001b[0md\u001b[0me\u001b[0m:\u001b[0m0\u001b[0m3\u001b[0m/\u001b[65D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000252,
+      "\u001b[?2004l"
+    ],
+    [
+      0.003556,
+      "\u001b[?1l"
+    ],
+    [
+      4.7e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.003162,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.021616,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1;7m[color] \u001b[0;38;5;236;48;5;15;1;7m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[28A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.394325,
+      "\u001b[?25l\u001b[?7l\u001b[0ms\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.007869,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241mecurity-group-ids\u001b[0m\r\r\n\u001b[66C\u001b[0;38;5;0;48;5;250m security-group-ids     \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[66C\u001b[0;38;5;0;48;5;250m security-groups        \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[66C\u001b[0;38;5;0;48;5;250m subnet-id              \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[66C\u001b[0;38;5;0;48;5;250m subnet-ipv4-cidr-block \u001b[0;48;5;238m \u001b[4A\u001b[25D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.121321,
+      "\u001b[?25l\u001b[?7l\u001b[0mu\u001b[0m                \u001b[0m\r\r\n\u001b[66C\u001b[0m                         \u001b[0m\r\r\n\u001b[66C\u001b[0m                         \u001b[0m\r\r\n\u001b[66C\u001b[0m                         \u001b[0m\r\r\n\u001b[66C\u001b[0m                         \u001b[4A\u001b[24D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.007658,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241mbnet-id\u001b[0m\r\r\n\u001b[67C\u001b[0;38;5;0;48;5;250m subnet-id              \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[67C\u001b[0;38;5;0;48;5;250m subnet-ipv4-cidr-block \u001b[0;48;5;238m \u001b[2A\u001b[25D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.117953,
+      "\u001b[?25l\u001b[?7l\u001b[0mb\u001b[0mn\u001b[0me\u001b[0mt\u001b[0m-\u001b[0mi\u001b[0md\u001b[0m\r\r\n\u001b[67C\u001b[0;38;5;15;48;5;102m subnet-id              \u001b[A\u001b[17D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.785813,
+      "\u001b[?25l\u001b[?7l\u001b[74D\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[0ms\u001b[0mu\u001b[0mb\u001b[0mn\u001b[0me\u001b[0mt\u001b[0m-\u001b[0mi\u001b[0md\u001b[74D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000314,
+      "\u001b[?2004l"
+    ],
+    [
+      0.002205,
+      "\u001b[37msubnet-id\u001b[0m: \u001b[37msubnet-a663dbd1\u001b[0m\r\n"
+    ],
+    [
+      0.001785,
+      "\u001b[?1l"
+    ],
+    [
+      4.8e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.003306,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.008332,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1;7m[color] \u001b[0;38;5;236;48;5;15;1;7m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[26A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      2.958028,
+      "\u001b[?25l\u001b[?7l\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.009816,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m device-number          \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m interface-id           \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m ipv4-associations/     \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m local-hostname         \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m local-ipv4s            \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m mac                    \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m owner-id               \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m public-hostname        \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m public-ipv4s           \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m security-group-ids     \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m security-groups        \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m subnet-id              \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m subnet-ipv4-cidr-block \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m vpc-id                 \u001b[0;48;5;102m \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m "
+    ],
+    [
+      2.1e-05,
+      "vpc-ipv4-cidr-block    \u001b[0;48;5;102m \u001b[0m\r\r\n"
+    ],
+    [
+      0.000259,
+      "\u001b[65C\u001b[0;38;5;0;48;5;250m vpc-ipv4-cidr-blocks   \u001b[0;48;5;102m \u001b[16A\u001b[25D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.775804,
+      "\u001b[?25l\u001b[?7l\u001b[0md\u001b[0me\u001b[0mv\u001b[0mi\u001b[0mc\u001b[0me\u001b[0m-\u001b[0mn\u001b[0mu\u001b[0mm\u001b[0mb\u001b[0me\u001b[0mr\u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;15;48;5;102m device-number          \u001b[A\u001b[11D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.206931,
+      "\u001b[?25l\u001b[?7l\u001b[13D\u001b[0mi\u001b[0mn\u001b[0mt\u001b[0me\u001b[0mr\u001b[0mf\u001b[0ma\u001b[0mc\u001b[0me\u001b[0m-\u001b[0mi\u001b[0md\u001b[0m \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m device-number          \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;15;48;5;102m interface-id           \u001b[2A\u001b[12D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.174789,
+      "\u001b[?25l\u001b[?7l\u001b[11D\u001b[0mp\u001b[0mv\u001b[0m4\u001b[0m-\u001b[0ma\u001b[0ms\u001b[0ms\u001b[0mo\u001b[0mc\u001b[C\u001b[0ma\u001b[0mt\u001b[0mi\u001b[0mo\u001b[0mn\u001b[0ms\u001b[0m/\u001b[0m\r\r\n\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m interface-id           \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;15;48;5;102m ipv4-associations/     \u001b[3A\u001b[6D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.193444,
+      "\u001b[?25l\u001b[?7l\u001b[18D\u001b[0ml\u001b[0mo\u001b[0mc\u001b[0ma\u001b[0ml\u001b[0m-\u001b[0mh\u001b[0mo\u001b[0ms\u001b[0mt\u001b[0mn\u001b[C\u001b[0mm\u001b[0me\u001b[0m    \u001b[0m\r\r\n\r\r\n\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m ipv4-associations/     \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;15;48;5;102m local-hostname         \u001b[4A\u001b[10D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.193598,
+      "\u001b[?25l\u001b[?7l\u001b[8D\u001b[0mi\u001b[0mp\u001b[0mv\u001b[0m4\u001b[0ms\u001b[0m   \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m local-hostname         \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;15;48;5;102m local-ipv4s            \u001b[5A\u001b[13D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.189873,
+      "\u001b[?25l\u001b[?7l\u001b[11D\u001b[0mm\u001b[0ma\u001b[C\u001b[0m        \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m local-ipv4s            \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;15;48;5;102m mac                    \u001b[6A\u001b[21D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.623765,
+      "\u001b[?25l\u001b[?7l\u001b[3D\u001b[0ml\u001b[0mo\u001b[C\u001b[0ma\u001b[0ml\u001b[0m-\u001b[0mi\u001b[0mp\u001b[0mv\u001b[0m4\u001b[0ms\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[65C\u001b[0;38;5;15;48;5;102m local-ipv4s            \u001b[0m\r\r\n\u001b[65C\u001b[0;38;5;0;48;5;250m mac                    \u001b[6A\u001b[13D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.259537,
+      "\u001b[?25l\u001b[?7l\u001b[76D\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[0ml\u001b[0mo\u001b[0mc\u001b[0ma\u001b[0ml\u001b[0m-\u001b[0mi\u001b[0mp\u001b[0mv\u001b[0m4\u001b[0ms\u001b[76D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.00027,
+      "\u001b[?2004l"
+    ],
+    [
+      0.001796,
+      "\u001b[37mlocal-ipv4s\u001b[0m: \u001b[37m172.31.45.231\u001b[0m\r\n"
+    ],
+    [
+      0.001966,
+      "\u001b[?1l"
+    ],
+    [
+      4.6e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.002977,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.008039,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1;7m[color] \u001b[0;38;5;236;48;5;15;1;7m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[24A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      3.142551,
+      "\u001b[65D\u001b[J\u001b[0m\u001b[?7h"
+    ],
+    [
+      0.000583,
+      "\u001b[?2004l"
+    ],
+    [
+      4.6e-05,
+      "\u001b[?1l\u001b[37mjson mode on\u001b[0m\r\n"
+    ],
+    [
+      0.000166,
+      "\u001b[6n"
+    ],
+    [
+      0.003122,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.008372,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1;7m[color] \u001b[0;38;5;236;48;5;15;1m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[23A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.538145,
+      "\u001b[?25l\u001b[?7l\u001b[0ml\u001b[0mo\u001b[0mc\u001b[0ma\u001b[0ml\u001b[0m-\u001b[0mi\u001b[0mp\u001b[0mv\u001b[0m4\u001b[0ms\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.226578,
+      "\u001b[?25l\u001b[?7l\u001b[76D\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[0ml\u001b[0mo\u001b[0mc\u001b[0ma\u001b[0ml\u001b[0m-\u001b[0mi\u001b[0mp\u001b[0mv\u001b[0m4\u001b[0ms\u001b[76D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000254,
+      "\u001b[?2004l"
+    ],
+    [
+      0.002142,
+      "{\"local-ipv4s\": \"172.31.45.231\"}\r\n"
+    ],
+    [
+      0.00197,
+      "\u001b[?1l"
+    ],
+    [
+      4.7e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.003025,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.007325,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1;7m[color] \u001b[0;38;5;236;48;5;15;1m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[21A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      2.475761,
+      "\u001b[?25l\u001b[?7l\u001b[0ml\u001b[0mo\u001b[0mc\u001b[0ma\u001b[0ml\u001b[0m-\u001b[0mi\u001b[0mp\u001b[0mv\u001b[0m4\u001b[0ms\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.21763,
+      "\u001b[?25l\u001b[?7l\u001b[11D\u001b[0ms\u001b[0mu\u001b[0mb\u001b[0mn\u001b[0me\u001b[0mt\u001b[0m-\u001b[0mi\u001b[0md\u001b[0m  \u001b[2D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.844124,
+      "\u001b[?25l\u001b[?7l\u001b[74D\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[0ms\u001b[0mu\u001b[0mb\u001b[0mn\u001b[0me\u001b[0mt\u001b[0m-\u001b[0mi\u001b[0md\u001b[74D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000264,
+      "\u001b[?2004l"
+    ],
+    [
+      0.00193,
+      "{\"subnet-id\": \"subnet-a663dbd1\"}\r\n"
+    ],
+    [
+      0.001877,
+      "\u001b[?1l"
+    ],
+    [
+      4.5e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.003061,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.007698,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1;7m[color] \u001b[0;38;5;236;48;5;15;1m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[19A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.689229,
+      "\u001b[?25l\u001b[?7l\u001b[65D\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[65D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000183,
+      "\u001b[?2004l"
+    ],
+    [
+      0.000222,
+      "{\r\n    \"metadata\": [\r\n        \"device-number\", \r\n        \"interface-id\", \r\n        \"ipv4-associations/\", \r\n        \"local-hostname\", \r\n        \"local-ipv4s\", \r\n        \"mac\", \r\n        \"owner-id\", \r\n        \"public-hostname\", \r\n        \"public-ipv4s\", \r\n        \"security-group-ids\", \r\n        \"security-groups\", \r\n        \"subnet-id\", \r\n        \"subnet-ipv4-cidr-block\", \r\n        \"vpc-id\", \r\n        \"vpc-ipv4-cidr-block\", \r\n        \"vpc-ipv4-cidr-blocks\", \r\n        \"q\", \r\n        \"quit\", \r\n        \"l\", \r\n        \"list\", \r\n        \"\", \r\n        \"b\", \r\n        \"back\", \r\n        \"r\", \r\n        \"reset\", \r\n        \"c\", \r\n        \"clear\"\r\n    ]\r\n}\r\n"
+    ],
+    [
+      0.002009,
+      "\u001b[?1l"
+    ],
+    [
+      9.8e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.003311,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.004733,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1;7m[color] \u001b[0;38;5;236;48;5;15;1m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      3.665939,
+      "\u001b[?25l\u001b[?7l\u001b[0mv\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.003726,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241mpc-id\u001b[0m\r\r\n\u001b[66C\u001b[0;38;5;0;48;5;250m vpc-id               \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[66C\u001b[0;38;5;0;48;5;250m vpc-ipv4-cidr-block  \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[66C\u001b[0;38;5;0;48;5;250m vpc-ipv4-cidr-blocks \u001b[0;48;5;238m \u001b[3A\u001b[23D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.121928,
+      "\u001b[?25l\u001b[?7l\u001b[0mp\u001b[0m    \u001b[0m\r\r\n\u001b[66C\u001b[0m                       \u001b[0m\r\r\n\u001b[66C\u001b[0m                       \u001b[0m\r\r\n\u001b[66C\u001b[0m                       \u001b[3A\u001b[22D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.0035,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241mc-id\u001b[0m\r\r\n\u001b[67C\u001b[0;38;5;0;48;5;250m vpc-id               \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[67C\u001b[0;38;5;0;48;5;250m vpc-ipv4-cidr-block  \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[67C\u001b[0;38;5;0;48;5;250m vpc-ipv4-cidr-blocks \u001b[0;48;5;238m \u001b[3A\u001b[23D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.213497,
+      "\u001b[?25l\u001b[?7l\u001b[0mc\u001b[0m   \u001b[0m\r\r\n\u001b[67C\u001b[0m                       \u001b[0m\r\r\n\u001b[67C\u001b[0m                       \u001b[0m\r\r\n\u001b[67C\u001b[0m                       \u001b[3A\u001b[22D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.003532,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241m-id\u001b[0m\r\r\n\u001b[68C\u001b[0;38;5;0;48;5;250m vpc-id               \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[68C\u001b[0;38;5;0;48;5;250m vpc-ipv4-cidr-block  \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[68C\u001b[0;38;5;0;48;5;250m vpc-ipv4-cidr-blocks \u001b[0;48;5;238m \u001b[3A\u001b[23D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.404018,
+      "\u001b[?25l\u001b[?7l\u001b[0m-\u001b[0m  \u001b[0m\r\r\n\u001b[68C\u001b[0m                       \u001b[0m\r\r\n\u001b[68C\u001b[0m                       \u001b[0m\r\r\n\u001b[68C\u001b[0m                       \u001b[3A\u001b[22D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.002864,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241mid\u001b[2D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.059333,
+      "\u001b[?25l\u001b[?7l\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      2.586315,
+      "\u001b[?25l\u001b[?7l\u001b[0mi\u001b[0m \b\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.003357,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241md\u001b[0m\r\r\n\u001b[70C\u001b[0;38;5;0;48;5;250m interface-id       \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[70C\u001b[0;38;5;0;48;5;250m ipv4-associations/ \u001b[0;48;5;238m \u001b[2A\u001b[21D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.20301,
+      "\u001b[?25l\u001b[?7l\u001b[0md\u001b[0m\r\r\n\u001b[70C\u001b[0m                     \u001b[0m\r\r\n\u001b[70C\u001b[0m                     \u001b[2A\u001b[20D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.002334,
+      "\u001b[?25l\u001b[?7l\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.596758,
+      "\u001b[?25l\u001b[?7l\u001b[71D\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[0mv\u001b[0mp\u001b[0mc\u001b[0m-\u001b[0mi\u001b[0md\u001b[71D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000244,
+      "\u001b[?2004l"
+    ],
+    [
+      0.00211,
+      "{\"vpc-id\": \"vpc-e7870582\"}\r\n"
+    ],
+    [
+      0.002067,
+      "\u001b[?1l"
+    ],
+    [
+      4.6e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.003016,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.005726,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1;7m[color] \u001b[0;38;5;236;48;5;15;1m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      5.374063,
+      "\u001b[65D\u001b[J\u001b[0m\u001b[?7h"
+    ],
+    [
+      0.000405,
+      "\u001b[?2004l"
+    ],
+    [
+      4.2e-05,
+      "\u001b[?1l"
+    ],
+    [
+      3.3e-05,
+      "\u001b[31mcolor mode on\u001b[0m\r\n"
+    ],
+    [
+      0.000204,
+      "\u001b[6n"
+    ],
+    [
+      0.003593,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.004692,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1m[color] \u001b[0;38;5;236;48;5;15;1m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.685384,
+      "\u001b[?25l\u001b[?7l\u001b[65D\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[65D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000255,
+      "\u001b[?2004l"
+    ],
+    [
+      0.002222,
+      "{\r\n    \u001b[34;01m\"metadata\"\u001b[39;49;00m: [\r\n        \u001b[33m\"device-number\"\u001b[39;49;00m, \r\n        \u001b[33m\"interface-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"ipv4-associations/\"\u001b[39;49;00m, \r\n        \u001b[33m\"local-hostname\"\u001b[39;49;00m, \r\n        \u001b[33m\"local-ipv4s\"\u001b[39;49;00m, \r\n        \u001b[33m\"mac\"\u001b[39;49;00m, \r\n        \u001b[33m\"owner-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"public-hostname\"\u001b[39;49;00m, \r\n        \u001b[33m\"public-ipv4s\"\u001b[39;49;00m, \r\n        \u001b[33m\"security-group-ids\"\u001b[39;49;00m, \r\n        \u001b[33m\"security-groups\"\u001b[39;49;00m, \r\n        \u001b[33m\"subnet-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"subnet-ipv4-cidr-block\"\u001b[39;49;00m, \r\n        \u001b[33m\"vpc-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"vpc-ipv4-cidr-block\"\u001b[39;49;00m, \r\n        \u001b[33m\"vpc-ipv4-cidr-blocks\"\u001b[39;49;00m, \r\n        \u001b[33m\"q\"\u001b[39;49;00m, \r\n        \u001b[33m\"quit\"\u001b[39;49;00m, \r\n        \u001b[33m\"l\"\u001b[39;49;00m, \r\n        \u001b[33m\"list\"\u001b[39;49;00m, \r\n        \u001b[33m\"\"\u001b[39;49;00m, \r\n        \u001b[33m\"b\"\u001b[39;49;00m, \r\n        \u001b[33m\"back\"\u001b[39;49;00m, \r\n        \u001b[33m\"r\"\u001b[39;49;00m, \r\n        \u001b[33m\"reset\"\u001b[39;49;00m,"
+    ],
+    [
+      2.6e-05,
+      " \r\n        \u001b[33m\"c\"\u001b[39;49;00m, \r\n        \u001b[33m\"clear\"\u001b[39;49;00m\r\n    ]\r\n}\r\n"
+    ],
+    [
+      0.000552,
+      "\r\n"
+    ],
+    [
+      0.001729,
+      "\u001b[?1l"
+    ],
+    [
+      9.9e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.003164,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.004669,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1m[color] \u001b[0;38;5;236;48;5;15;1m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[65C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      2.997394,
+      "\u001b[?25l\u001b[?7l\u001b[0mb\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.003258,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\u001b[66C\u001b[0;38;5;0;48;5;250m b     \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[66C\u001b[0;38;5;0;48;5;250m back  \u001b[0;48;5;238m \u001b[2A\u001b[8D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.13914,
+      "\u001b[?25l\u001b[?7l\u001b[66D\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/network/interfaces/macs/06:ac:75:63:de:03/]> \u001b[0mb\u001b[66D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000231,
+      "\u001b[?2004l"
+    ],
+    [
+      0.004789,
+      "\u001b[?1l"
+    ],
+    [
+      4.7e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.00294,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/network/interfaces/macs]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[46C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.005503,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1m[color] \u001b[0;38;5;236;48;5;15;1m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[46C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      2.417803,
+      "\u001b[?25l\u001b[?7l\u001b[46D\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/network/interfaces/macs]> \u001b[46D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000238,
+      "\u001b[?2004l"
+    ],
+    [
+      0.000613,
+      "{\r\n    \u001b[34;01m\"metadata\"\u001b[39;49;00m: [\r\n        \u001b[33m\"06:ac:75:63:de:03/\"\u001b[39;49;00m, \r\n        \u001b[33m\"q\"\u001b[39;49;00m, \r\n        \u001b[33m\"quit\"\u001b[39;49;00m, \r\n        \u001b[33m\"l\"\u001b[39;49;00m, \r\n        \u001b[33m\"list\"\u001b[39;49;00m, \r\n        \u001b[33m\"\"\u001b[39;49;00m, \r\n        \u001b[33m\"b\"\u001b[39;49;00m, \r\n        \u001b[33m\"back\"\u001b[39;49;00m, \r\n        \u001b[33m\"r\"\u001b[39;49;00m, \r\n        \u001b[33m\"reset\"\u001b[39;49;00m, \r\n        \u001b[33m\"c\"\u001b[39;49;00m, \r\n        \u001b[33m\"clear\"\u001b[39;49;00m\r\n    ]\r\n}\r\n\r\n"
+    ],
+    [
+      0.002058,
+      "\u001b[?1l"
+    ],
+    [
+      4.5e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.002928,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/network/interfaces/macs]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[46C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.004578,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1m[color] \u001b[0;38;5;236;48;5;15;1m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[46C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      2.069362,
+      "\u001b[?25l\u001b[?7l\u001b[0mr\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.003181,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\u001b[47C\u001b[0;38;5;0;48;5;250m r     \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[47C\u001b[0;38;5;0;48;5;250m reset \u001b[0;48;5;238m \u001b[2A\u001b[8D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.842067,
+      "\u001b[?25l\u001b[?7l\u001b[47D\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/network/interfaces/macs]> \u001b[0mr\u001b[47D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000279,
+      "\u001b[?2004l"
+    ],
+    [
+      0.003586,
+      "\u001b[?1l"
+    ],
+    [
+      8.5e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.002712,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.004478,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1m[color] \u001b[0;38;5;236;48;5;15;1m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.028362,
+      "\u001b[?25l\u001b[?7l\u001b[23D\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[23D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000206,
+      "\u001b[?2004l"
+    ],
+    [
+      0.001031,
+      "{\r\n    \u001b[34;01m\"metadata\"\u001b[39;49;00m: [\r\n        \u001b[33m\"ami-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"ami-launch-index\"\u001b[39;49;00m, \r\n        \u001b[33m\"ami-manifest-path\"\u001b[39;49;00m, \r\n        \u001b[33m\"block-device-mapping/\"\u001b[39;49;00m, \r\n        \u001b[33m\"hostname\"\u001b[39;49;00m, \r\n        \u001b[33m\"iam/\"\u001b[39;49;00m, \r\n        \u001b[33m\"instance-action\"\u001b[39;49;00m, \r\n        \u001b[33m\"instance-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"instance-type\"\u001b[39;49;00m, \r\n        \u001b[33m\"local-hostname\"\u001b[39;49;00m, \r\n        \u001b[33m\"local-ipv4\"\u001b[39;49;00m, \r\n        \u001b[33m\"mac\"\u001b[39;49;00m, \r\n        \u001b[33m\"metrics/\"\u001b[39;49;00m, \r\n        \u001b[33m\"network/\"\u001b[39;49;00m, \r\n        \u001b[33m\"placement/\"\u001b[39;49;00m, \r\n        \u001b[33m\"profile\"\u001b[39;49;00m, \r\n        \u001b[33m\"public-hostname\"\u001b[39;49;00m, \r\n        \u001b[33m\"public-ipv4\"\u001b[39;49;00m, \r\n        \u001b[33m\"public-keys/\"\u001b[39;49;00m, \r\n        \u001b[33m\"reservation-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"security-groups\"\u001b[39;49;00m, \r\n        \u001b[33m\"services/\"\u001b[39;49;00m, \r\n        \u001b[33m\"q\"\u001b[39;49;00m, \r\n        \u001b[33m\"quit\"\u001b[39;49;00m, \r\n        \u001b[3"
+    ],
+    [
+      3e-05,
+      "3m\"l\"\u001b[39;49;00m, \r\n        \u001b[33m\"list\"\u001b[39;49;00m, \r\n        \u001b[33m\"\"\u001b[39;49;00m, \r\n        \u001b[33m\"b\"\u001b[39;49;00m, \r\n        \u001b[33m\"back\"\u001b[39;49;00m, \r\n        \u001b[33m\"r\"\u001b[39;49;00m, \r\n        \u001b[33m\"reset\"\u001b[39;49;00m, \r\n        \u001b[33m\"c\"\u001b[39;49;00m, \r\n"
+    ],
+    [
+      0.000395,
+      "        \u001b[33m\"clear\"\u001b[39;49;00m\r\n    ]\r\n}\r\n\r\n"
+    ],
+    [
+      0.00158,
+      "\u001b[?1l"
+    ],
+    [
+      4.6e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.002881,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.00539,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1m[color] \u001b[0;38;5;236;48;5;15;1m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.683034,
+      "\u001b[?25l\u001b[?7l\u001b[0ma\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.003432,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241mmi-id\u001b[0m\r\r\n\u001b[24C\u001b[0;38;5;0;48;5;250m ami-id            \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[24C\u001b[0;38;5;0;48;5;250m ami-launch-index  \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[24C\u001b[0;38;5;0;48;5;250m ami-manifest-path \u001b[0;48;5;238m \u001b[3A\u001b[20D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.12982,
+      "\u001b[?25l\u001b[?7l\u001b[0mm\u001b[0m    \u001b[0m\r\r\n\u001b[24C\u001b[0m                    \u001b[0m\r\r\n\u001b[24C\u001b[0m                    \u001b[0m\r\r\n\u001b[24C\u001b[0m                    \u001b[3A\u001b[19D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.003109,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241mi-id\u001b[0m\r\r\n\u001b[25C\u001b[0;38;5;0;48;5;250m ami-id            \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[25C\u001b[0;38;5;0;48;5;250m ami-launch-index  \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[25C\u001b[0;38;5;0;48;5;250m ami-manifest-path \u001b[0;48;5;238m \u001b[3A\u001b[20D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.156515,
+      "\u001b[?25l\u001b[?7l\u001b[0mi\u001b[0m   \u001b[0m\r\r\n\u001b[25C\u001b[0m                    \u001b[0m\r\r\n\u001b[25C\u001b[0m                    \u001b[0m\r\r\n\u001b[25C\u001b[0m                    \u001b[3A\u001b[19D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.002956,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241m-id\u001b[0m\r\r\n\u001b[26C\u001b[0;38;5;0;48;5;250m ami-id            \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[26C\u001b[0;38;5;0;48;5;250m ami-launch-index  \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[26C\u001b[0;38;5;0;48;5;250m ami-manifest-path \u001b[0;48;5;238m \u001b[3A\u001b[20D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.104517,
+      "\u001b[?25l\u001b[?7l\u001b[0m-\u001b[0mi\u001b[0md\u001b[0m\r\r\n\u001b[26C\u001b[0;38;5;15;48;5;102m ami-id            \u001b[A\u001b[16D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.711683,
+      "\u001b[?25l\u001b[?7l\u001b[29D\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[0ma\u001b[0mm\u001b[0mi\u001b[0m-\u001b[0mi\u001b[0md\u001b[29D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000218,
+      "\u001b[?2004l"
+    ],
+    [
+      0.002259,
+      "{\u001b[34;01m\"ami-id\"\u001b[39;49;00m: \u001b[33m\"ami-e7527ed7\"\u001b[39;49;00m}\r\n\r\n"
+    ],
+    [
+      0.002077,
+      "\u001b[?1l"
+    ],
+    [
+      8.4e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.002688,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.004575,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1m[color] \u001b[0;38;5;236;48;5;15;1m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      3.214495,
+      "\u001b[23D\u001b[J\u001b[0m\u001b[?7h"
+    ],
+    [
+      0.000326,
+      "\u001b[?2004l"
+    ],
+    [
+      4.2e-05,
+      "\u001b[?1l"
+    ],
+    [
+      2.9e-05,
+      "\u001b[37mcolor mode off\u001b[0m\r\n"
+    ],
+    [
+      0.000158,
+      "\u001b[6n"
+    ],
+    [
+      0.002794,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;15;1mMetadata Navigator\u001b[0;38;5;15;1m[/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.004102,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1;7m[color] \u001b[0;38;5;236;48;5;15;1m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      2.365044,
+      "\u001b[23D\u001b[J\u001b[0m\u001b[?7h"
+    ],
+    [
+      0.000433,
+      "\u001b[?2004l"
+    ],
+    [
+      4.1e-05,
+      "\u001b[?1l"
+    ],
+    [
+      3.2e-05,
+      "\u001b[31mcolor mode on\u001b[0m\r\n"
+    ],
+    [
+      0.000186,
+      "\u001b[6n"
+    ],
+    [
+      0.003031,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.005227,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1m[color] \u001b[0;38;5;236;48;5;15;1m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.262004,
+      "\u001b[?25l\u001b[?7l\u001b[23D\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[23D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000281,
+      "\u001b[?2004l"
+    ],
+    [
+      0.001223,
+      "{\r\n    \u001b[34;01m\"metadata\"\u001b[39;49;00m: [\r\n        \u001b[33m\"ami-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"ami-launch-index\"\u001b[39;49;00m, \r\n        \u001b[33m\"ami-manifest-path\"\u001b[39;49;00m, \r\n        \u001b[33m\"block-device-mapping/\"\u001b[39;49;00m, \r\n        \u001b[33m\"hostname\"\u001b[39;49;00m, \r\n        \u001b[33m\"iam/\"\u001b[39;49;00m, \r\n        \u001b[33m\"instance-action\"\u001b[39;49;00m, \r\n        \u001b[33m\"instance-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"instance-type\"\u001b[39;49;00m, \r\n        \u001b[33m\"local-hostname\"\u001b[39;49;00m, \r\n        \u001b[33m\"local-ipv4\"\u001b[39;49;00m, \r\n        \u001b[33m\"mac\"\u001b[39;49;00m, \r\n        \u001b[33m\"metrics/\"\u001b[39;49;00m, \r\n        \u001b[33m\"network/\"\u001b[39;49;00m, \r\n        \u001b[33m\"placement/\"\u001b[39;49;00m, \r\n        \u001b[33m\"profile\"\u001b[39;49;00m, \r\n        \u001b[33m\"public-hostname\"\u001b[39;49;00m, \r\n        \u001b[33m\"public-ipv4\"\u001b[39;49;00m, \r\n        \u001b[33m\"public-keys/\"\u001b[39;49;00m, \r\n        \u001b[33m\"reservation-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"security-groups\"\u001b[39;49;00m, \r\n        \u001b[33m\"services/\"\u001b[39;49;00m, \r\n        \u001b[33m\"q\"\u001b[39;49;00m, \r\n        \u001b[33m\"quit\"\u001b[39;49;00m, \r\n        \u001b[3"
+    ],
+    [
+      3.1e-05,
+      "3m\"l\"\u001b[39;49;00m, \r\n        \u001b[33m\"list\"\u001b[39;49;00m, \r\n"
+    ],
+    [
+      0.000249,
+      "        \u001b[33m\"\"\u001b[39;49;00m, \r\n        \u001b[33m\"b\"\u001b[39;49;00m, \r\n        \u001b[33m\"back\"\u001b[39;49;00m, \r\n        \u001b[33m\"r\"\u001b[39;49;00m, \r\n        \u001b[33m\"reset\"\u001b[39;49;00m, \r\n        \u001b[33m\"c\"\u001b[39;49;00m, \r\n        \u001b[33m\"clear\"\u001b[39;49;00m\r\n    ]\r\n}\r\n\r\n"
+    ],
+    [
+      0.002131,
+      "\u001b[?1l"
+    ],
+    [
+      4.6e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.002721,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.004545,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1m[color] \u001b[0;38;5;236;48;5;15;1m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      3.086197,
+      "\u001b[?25l\u001b[?7l\u001b[23D\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[23D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000258,
+      "\u001b[?2004l"
+    ],
+    [
+      0.001057,
+      "{\r\n    \u001b[34;01m\"metadata\"\u001b[39;49;00m: [\r\n        \u001b[33m\"ami-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"ami-launch-index\"\u001b[39;49;00m, \r\n        \u001b[33m\"ami-manifest-path\"\u001b[39;49;00m, \r\n        \u001b[33m\"block-device-mapping/\"\u001b[39;49;00m, \r\n        \u001b[33m\"hostname\"\u001b[39;49;00m, \r\n        \u001b[33m\"iam/\"\u001b[39;49;00m, \r\n        \u001b[33m\"instance-action\"\u001b[39;49;00m, \r\n        \u001b[33m\"instance-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"instance-type\"\u001b[39;49;00m, \r\n        \u001b[33m\"local-hostname\"\u001b[39;49;00m, \r\n        \u001b[33m\"local-ipv4\"\u001b[39;49;00m, \r\n        \u001b[33m\"mac\"\u001b[39;49;00m, \r\n        \u001b[33m\"metrics/\"\u001b[39;49;00m, \r\n        \u001b[33m\"network/\"\u001b[39;49;00m, \r\n        \u001b[33m\"placement/\"\u001b[39;49;00m, \r\n        \u001b[33m\"profile\"\u001b[39;49;00m, \r\n        \u001b[33m\"public-hostname\"\u001b[39;49;00m, \r\n        \u001b[33m\"public-ipv4\"\u001b[39;49;00m, \r\n        \u001b[33m\"public-keys/\"\u001b[39;49;00m, \r\n        \u001b[33m\"reservation-id\"\u001b[39;49;00m, \r\n        \u001b[33m\"security-groups\"\u001b[39;49;00m, \r\n        \u001b[33m\"services/\"\u001b[39;49;00m, \r\n        \u001b[33m\"q\"\u001b[39;49;00m, \r\n        \u001b[33m\"quit\"\u001b[39;49;00m, \r\n        \u001b[3"
+    ],
+    [
+      2.9e-05,
+      "3m\"l\"\u001b[39;49;00m, \r\n        \u001b[33m\"list\"\u001b[39;49;00m, \r\n        \u001b[33m\"\"\u001b[39;49;00m, \r\n        \u001b[33m\"b\"\u001b[39;49;00m, \r\n        \u001b[33m\"back\"\u001b[39;49;00m, \r\n"
+    ],
+    [
+      0.00045,
+      "        \u001b[33m\"r\"\u001b[39;49;00m, \r\n        \u001b[33m\"reset\"\u001b[39;49;00m, \r\n        \u001b[33m\"c\"\u001b[39;49;00m, \r\n        \u001b[33m\"clear\"\u001b[39;49;00m\r\n    ]\r\n}\r\n\r\n"
+    ],
+    [
+      0.001645,
+      "\u001b[?1l"
+    ],
+    [
+      3.9e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.002731,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.004427,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1m[color] \u001b[0;38;5;236;48;5;15;1m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.480578,
+      "\u001b[23D\u001b[J\u001b[0m\u001b[?7h"
+    ],
+    [
+      0.000317,
+      "\u001b[?2004l"
+    ],
+    [
+      0.000134,
+      "\u001b[?1l\u001b[31mjson mode off\u001b[0m\r\n"
+    ],
+    [
+      0.000172,
+      "\u001b[6n"
+    ],
+    [
+      0.002902,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.005422,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1m[color] \u001b[0;38;5;236;48;5;15;1;7m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.27335,
+      "\u001b[?25l\u001b[?7l\u001b[0ma\u001b[0mm\u001b[0mi\u001b[0m-\u001b[0mi\u001b[0md\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.833944,
+      "\u001b[?25l\u001b[?7l\u001b[29D\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[0ma\u001b[0mm\u001b[0mi\u001b[0m-\u001b[0mi\u001b[0md\u001b[29D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000211,
+      "\u001b[?2004l"
+    ],
+    [
+      0.002116,
+      "\u001b[32mami-id\u001b[0m: \u001b[37mami-e7527ed7\u001b[0m\r\n"
+    ],
+    [
+      0.001829,
+      "\u001b[?1l"
+    ],
+    [
+      8.3e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.002691,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.00454,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1m[color] \u001b[0;38;5;236;48;5;15;1;7m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.267509,
+      "\u001b[?25l\u001b[?7l\u001b[0ma\u001b[0mm\u001b[0mi\u001b[0m-\u001b[0mi\u001b[0md\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.271749,
+      "\u001b[?25l\u001b[?7l\u001b[6D\u001b[0mr\u001b[0m     \u001b[5D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.10482,
+      "\u001b[?25l\u001b[?7l\b\u001b[0m \b\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.237543,
+      "\u001b[?25l\u001b[?7l\u001b[23D\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[23D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000207,
+      "\u001b[?2004l"
+    ],
+    [
+      9.9e-05,
+      "\u001b[32m['ami-id', 'ami-launch-index', 'ami-manifest-path', 'block-device-mapping/', 'hostname', 'iam/', 'instance-action', 'instance-id', 'instance-type', 'local-hostname', 'local-ipv4', 'mac', 'metrics/', 'network/', 'placement/', 'profile', 'public-hostname', 'public-ipv4', 'public-keys/', 'reservation-id', 'security-groups', 'services/', 'q', 'quit', 'l', 'list', '', 'b', 'back', 'r', 'reset', 'c', 'clear']\u001b[0m\r\n"
+    ],
+    [
+      0.001914,
+      "\u001b[?1l"
+    ],
+    [
+      4.5e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.00274,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.004493,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1m[color] \u001b[0;38;5;236;48;5;15;1;7m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      2.50401,
+      "\u001b[?25l\u001b[?7l\u001b[0mp\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.003068,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241mlacement/\u001b[0m\r\r\n\u001b[24C\u001b[0;38;5;0;48;5;250m placement/      \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[24C\u001b[0;38;5;0;48;5;250m profile         \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[24C\u001b[0;38;5;0;48;5;250m public-hostname \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[24C\u001b[0;38;5;0;48;5;250m public-ipv4     \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[24C\u001b[0;38;5;0;48;5;250m public-keys/    \u001b[0;48;5;238m \u001b[5A\u001b[18D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.254254,
+      "\u001b[?25l\u001b[?7l\u001b[0mu\u001b[0m        \u001b[0m\r\r\n\u001b[24C\u001b[0m                  \u001b[0m\r\r\n\u001b[24C\u001b[0m                  \u001b[0m\r\r\n\u001b[24C\u001b[0m                  \u001b[0m\r\r\n\u001b[24C\u001b[0m                  \u001b[0m\r\r\n\u001b[24C\u001b[0m                  \u001b[5A\u001b[17D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.002945,
+      "\u001b[?25l\u001b[?7l\u001b[0;38;5;241mblic-hostname\u001b[0m\r\r\n\u001b[25C\u001b[0;38;5;0;48;5;250m public-hostname \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[25C\u001b[0;38;5;0;48;5;250m public-ipv4     \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[25C\u001b[0;38;5;0;48;5;250m public-keys/    \u001b[0;48;5;238m \u001b[3A\u001b[18D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.147592,
+      "\u001b[?25l\u001b[?7l\u001b[0mb\u001b[0ml\u001b[0mi\u001b[0mc\u001b[0m-\u001b[0mh\u001b[0mo\u001b[0ms\u001b[0mt\u001b[0mn\u001b[0ma\u001b[0mm\u001b[0me\u001b[0m\r\r\n\u001b[25C\u001b[0;38;5;15;48;5;102m public-hostname \u001b[A\u001b[4D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.001043,
+      "\u001b[?25l\u001b[?7l\u001b[8D\u001b[0mi\u001b[0mp\u001b[0mv\u001b[0m4\u001b[0m    \u001b[0m\r\r\n\u001b[25C\u001b[0;38;5;0;48;5;250m public-hostname \u001b[0m\r\r\n\u001b[25C\u001b[0;38;5;15;48;5;102m public-ipv4     \u001b[2A\u001b[8D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.191618,
+      "\u001b[?25l\u001b[?7l\u001b[4D\u001b[0mk\u001b[0me\u001b[0my\u001b[0ms\u001b[0m/\u001b[0m\r\r\n\r\r\n\u001b[25C\u001b[0;38;5;0;48;5;250m public-ipv4     \u001b[0m\r\r\n\u001b[25C\u001b[0;38;5;15;48;5;102m public-keys/    \u001b[3A\u001b[7D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.673365,
+      "\u001b[?25l\u001b[?7l\u001b[5D\u001b[0mi\u001b[0mp\u001b[0mv\u001b[0m4\u001b[0m \u001b[0m\r\r\n\r\r\n\u001b[25C\u001b[0;38;5;15;48;5;102m public-ipv4     \u001b[0m\r\r\n\u001b[25C\u001b[0;38;5;0;48;5;250m public-keys/    \u001b[3A\u001b[8D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.633995,
+      "\u001b[?25l\u001b[?7l\u001b[34D\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[0mp\u001b[0mu\u001b[0mb\u001b[0ml\u001b[0mi\u001b[0mc\u001b[0m-\u001b[0mi\u001b[0mp\u001b[0mv\u001b[0m4\u001b[34D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000218,
+      "\u001b[?2004l"
+    ],
+    [
+      0.002069,
+      "\u001b[32mpublic-ipv4\u001b[0m: \u001b[37m52.26.171.238\u001b[0m\r\n"
+    ],
+    [
+      0.002648,
+      "\u001b[?1l"
+    ],
+    [
+      8.5e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.002695,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.004549,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1m[color] \u001b[0;38;5;236;48;5;15;1;7m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      4.633826,
+      "\u001b[?25l\u001b[?7l\u001b[0mt\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.002608,
+      "\u001b[?25l\u001b[?7l\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.229032,
+      "\u001b[?25l\u001b[?7l\u001b[0me\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.002611,
+      "\u001b[?25l\u001b[?7l\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.987759,
+      "\u001b[?25l\u001b[?7l\u001b[25D\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[0mt\u001b[0me\u001b[25D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000209,
+      "\u001b[?2004l"
+    ],
+    [
+      0.002136,
+      "\u001b[1m\u001b[31m404 Not Found - Error\r\n\r\n\u001b[0m\r\n\u001b[1m\u001b[31mMetadata Navigator\r\n===================\u001b[0m\r\n"
+    ],
+    [
+      0.000211,
+      "\u001b[32m\r\nINTERATIVE MODE:\r\nPress ENTER, l, or list to view available metadata options. \r\nEnter metadata name to view it's current value.\r\nEnter path name with trailling slash to navigate further on the categories\r\nEnter \"b\" or \"back\" to go back to previous metadata category \r\nEnter \"r\" or \"reset\" to go to root path\r\nEnter \"c\" or \"clear\" to clear the screen\r\nEnter \"q\" or \"quit\" to quit. \r\nPress \"Ctrl-t\" to toggle json mode (-j option on the commandline)\r\nPress \"Ctrl-y\" to toggle color mode (-c option on the commandline)\r\n\r\nPIPE MODE: \r\nCall the command with the \"-p\" argument. Call the command with \"-h\" for usage help. \r\n\r\n     \u001b[0m\r\n"
+    ],
+    [
+      0.001836,
+      "\u001b[?1l"
+    ],
+    [
+      4.7e-05,
+      "\u001b[6n"
+    ],
+    [
+      0.002954,
+      "\u001b[?2004h\u001b[?25l\u001b[0m\u001b[?7l\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[7A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.004359,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\u001b[0;38;5;236;48;5;15;1m[color] \u001b[0;38;5;236;48;5;15;1;7m[json] \u001b[0;38;5;236;48;5;15m                                                                                                                                                                                                                             \r\u001b[236C \r\u001b[8A\u001b[23C\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      4.623098,
+      "\u001b[?25l\u001b[?7l\u001b[0mq\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.004126,
+      "\u001b[?25l\u001b[?7l\u001b[0m\r\r\n\u001b[24C\u001b[0;38;5;0;48;5;250m q     \u001b[0;48;5;238m \u001b[0m\r\r\n\u001b[24C\u001b[0;38;5;0;48;5;250m quit  \u001b[0;48;5;238m \u001b[2A\u001b[8D\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.52834,
+      "\u001b[?25l\u001b[?7l\u001b[24D\u001b[0m\u001b[J\u001b[0;38;5;243;1mMetadata Navigator\u001b[0;38;5;14;1m[/]> \u001b[0mq\u001b[24D\u001b[0m\r\r\n\u001b[J\u001b[?7h\u001b[0m\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000232,
+      "\u001b[?2004l"
+    ],
+    [
+      0.024632,
+      "\u001b]0;ec2-user@ip-172-31-45-231:~/metadatacli/metadatacli\u001b\\"
+    ],
+    [
+      4.6e-05,
+      "[ec2-user@ip-172-31-45-231 metadatacli]$ "
+    ]
+  ]
+}

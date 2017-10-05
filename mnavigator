@@ -1,0 +1,28 @@
+#!/usr/bin/python
+
+from cli import * 
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-d", "--debug", help="Debug Mode", action="store_true")
+parser.add_argument("-j", "--json", help="JSON output mode", action="store_true")
+parser.add_argument("-c", "--color", help="COLOR output mode", action="store_true")
+parser.add_argument("-p", "--path", help="Metadata PATH for pipe output mode [Disables INTERATIVE mode][DEFAULT ROOT]",nargs='?', const="/")
+
+args=parser.parse_args()
+
+setdebugstatus(args.debug)
+if args.json:
+    setjsonstatus()
+
+if args.color: 
+    setcolorstatus()
+
+if args.path:
+   pipemode=True
+   pipemodepath=args.path
+else:
+   pipemode=False
+   pipemodepath=None
+
+climode(pipemode, pipemodepath)
