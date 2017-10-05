@@ -51,7 +51,7 @@ termcolor==1.1.0
 ### Installing
 
 ```
-git clone REPO
+git clone https://github.com/marcelocrnunes/metadatanavigator.git
 cd mnavigator/
 pip -r requirements.txt 
 chmod +x mnavigator
