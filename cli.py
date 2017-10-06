@@ -1,5 +1,5 @@
 from prompt_toolkit import prompt
-from prompt_toolkit.history import InMemoryHistory 
+from prompt_toolkit.history import InMemoryHistory
 from prompt_toolkit.auto_suggest import Suggestion, AutoSuggest
 from prompt_toolkit.contrib.completers import WordCompleter
 from prompt_toolkit.shortcuts import clear
@@ -7,8 +7,8 @@ from prompt_toolkit.styles import style_from_dict
 from prompt_toolkit.token import Token
 from prompt_toolkit.key_binding.manager import KeyBindingManager
 from prompt_toolkit.keys import Keys
-from os.path import split 
-from requests import request 
+from os.path import split
+from requests import request
 from termcolor import colored
 from pygments import highlight
 from pygments.lexers import JsonLexer
@@ -18,9 +18,9 @@ from sys import exit
 import json
 import logging
 
-DEBUG = False 
+DEBUG = False
 JSON = False
-COLOR = False 
+COLOR = False
 
 metadataurl="http://169.254.169.254/latest/meta-data/"
 
@@ -29,7 +29,7 @@ style = style_from_dict({
     Token.Colon: '#00ffff bold',
     Token.Color: '#333333 bg:#ffffff bold',
     Token.Json: '#333333 bg:#ffffff bold',
-    Token.Toolbar: '#333333 bg:#ffffff', 
+    Token.Toolbar: '#333333 bg:#ffffff',
     Token.ColorR: '#333333 bg:#ffffff bold reverse',
     Token.JsonR: '#333333 bg:#ffffff bold reverse',
     Token.TextNoColor: '#ffffff bold',
@@ -56,18 +56,18 @@ else:
 def gethelp():
     HELP= """
 INTERATIVE MODE:
-Press ENTER, l, or list to view available metadata options. 
+Press ENTER, l, or list to view available metadata options.
 Enter metadata name to view it's current value.
 Enter path name with trailling slash to navigate further on the categories
-Enter "b" or "back" to go back to previous metadata category 
+Enter "b" or "back" to go back to previous metadata category
 Enter "r" or "reset" to go to root path
 Enter "c" or "clear" to clear the screen
-Enter "q" or "quit" to quit. 
+Enter "q" or "quit" to quit.
 Press "Ctrl-t" to toggle json mode (-j option on the commandline)
 Press "Ctrl-y" to toggle color mode (-c option on the commandline)
 
-PIPE MODE: 
-Call the command with the "-p" argument. Call the command with "-h" for usage help. 
+PIPE MODE:
+Call the command with the "-p" argument. Call the command with "-h" for usage help.
 
      """
     print colored("Metadata Navigator\n===================", warning, attrs=['bold'])
@@ -82,30 +82,30 @@ def get_prompt_tokens(cli):
         (Token.Text, promptstr),
         (Token.Colon, '['+colonfill+']> '),
         ]
-    else: 
+    else:
         return [
         (Token.TextNoColor, promptstr),
         (Token.ColonNoColor, '['+colonfill+']> '),
         ]
- 
+
 
 def get_toolbar_tokens(cli):
     toolbarlist=[(Token.Toolbar,"")]
     if COLOR:
-        toolbarlist.append((Token.Color,"[color] "))    
+        toolbarlist.append((Token.Color,"[color] "))
     else:
         toolbarlist.append((Token.ColorR,"[color] "))
     if JSON:
-        toolbarlist.append((Token.Json,"[json] "))    
+        toolbarlist.append((Token.Json,"[json] "))
     else:
         toolbarlist.append((Token.JsonR,"[json] "))
     return toolbarlist
- 
+
 def setcompleter(words):
     return WordCompleter(words, ignore_case=True)
 
 def setwords(content):
-    return content+exitkeywords+clikeywords+bkeywords+rkeywords+ckeywords 
+    return content+exitkeywords+clikeywords+bkeywords+rkeywords+ckeywords, content
 
 def getmetadata(url):
     try:
@@ -117,7 +117,6 @@ def getmetadata(url):
         print colored("404 Not Found - Error\n\n", warning, attrs=['bold'])
         gethelp()
         return []
-       
 
 class SuggestMetadata(AutoSuggest):
     def __init__(self, words):
@@ -139,10 +138,10 @@ def setjsonstatus():
        JSON=True
 
 def getcolorstatus():
-    return COLOR 
+    return COLOR
 
 def setcolorstatus():
-    global COLOR 
+    global COLOR
     global warning, common, detail
     if COLOR:
         COLOR=False
@@ -164,7 +163,7 @@ def _(event):
         if getjsonstatus():
             setjsonstatus()
             print colored('json mode off',warning)
-        else: 
+        else:
             setjsonstatus()
             print colored('json mode on',warning)
     event.cli.run_in_terminal(setjson)
@@ -175,7 +174,7 @@ def _(event):
         if getcolorstatus():
             setcolorstatus()
             print colored('color mode off',warning)
-        else: 
+        else:
             setcolorstatus()
             print colored('color mode on',warning)
     event.cli.run_in_terminal(setcolor)
@@ -183,7 +182,7 @@ def _(event):
 def pipemode(pipemodepath="/"):
     global JSON
     global COLOR
-    words=getmetadata(metadataurl+"/"+pipemodepath)  
+    words=getmetadata(metadataurl+"/"+pipemodepath)
     if JSON:
         result=json.dumps({pipemodepath: words}, indent=4)
         if COLOR:
@@ -191,7 +190,7 @@ def pipemode(pipemodepath="/"):
         else:
             print result
     else:
-        if len(words)>1: 
+        if len(words)>1:
             print colored(words, detail)
         else:
             print colored(pipemodepath+":",detail),colored(words.pop(), common)
@@ -200,9 +199,9 @@ def climode(pipe=False, pipemodepath="/"):
     global colonfill
     global JSON
     global COLOR
-    meta = metadataurl 
+    meta = metadataurl
     metadatalist = getmetadata(meta)
-    words = setwords(metadatalist)
+    words, cleandata = setwords(metadatalist)
     history=InMemoryHistory()
     if pipe:
        pipemode(pipemodepath)
@@ -211,7 +210,7 @@ def climode(pipe=False, pipemodepath="/"):
     try:
         while True:
             user_input = prompt(get_prompt_tokens=get_prompt_tokens,
-                                style=style, 
+                                style=style,
                                 history=history,
                                 auto_suggest=SuggestMetadata(words),
                                 completer=setcompleter(words),
@@ -222,32 +221,32 @@ def climode(pipe=False, pipemodepath="/"):
                 clear()
             elif user_input in set(exitkeywords):
                 exit(0)
-            elif user_input in set(bkeywords): 
+            elif user_input in set(bkeywords):
                 head, tail = split(colonfill.rstrip('/'))
                 colonfill=head
                 meta=metadataurl+"/"+colonfill
                 if DEBUG: print meta
-                words=setwords(getmetadata(meta))
+                words, cleandata=setwords(getmetadata(meta))
             elif user_input in set(rkeywords):
                 colonfill="/"
                 meta=metadataurl
-                words=setwords(getmetadata(meta))
+                words, cleandata=setwords(getmetadata(meta))
             elif user_input in set(clikeywords):
-                if DEBUG: print("WORDS TYPE: %s",type(words))
+                if DEBUG: print("WORDS TYPE: %s",type(cleandata))
                 if JSON:
-                    result=json.dumps({'metadata': words}, indent=4)
+                    result=json.dumps({'metadata': cleandata}, indent=4)
                     if COLOR:
                         print (highlight(result,JsonLexer(), TerminalFormatter()))
                     else:
                         print result
                 else:
-                    print colored(words,detail)
-            elif '/' in user_input: 
+                    print colored(cleandata,detail)
+            elif '/' in user_input:
                if not colonfill.endswith("/"): colonfill=colonfill+"/"
                colonfill=colonfill+user_input
                meta=meta+"/"+user_input
                if DEBUG: print meta
-               words = setwords(getmetadata(meta))
+               words, cleandata= setwords(getmetadata(meta))
             else:
                try:
                    result=request("GET",meta+"/"+user_input)
