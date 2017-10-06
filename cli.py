@@ -241,7 +241,7 @@ def climode(pipe=False, pipemodepath="/"):
     try:
         while True:
             currenturl=meta
-            if DEBUG: print "Current URL:",meta
+            if DEBUG: print ("Current URL DEBUG:",meta)
             try:
                 user_input = prompt(get_prompt_tokens=get_prompt_tokens,
                                 style=style,
