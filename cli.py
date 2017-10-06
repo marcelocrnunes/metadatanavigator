@@ -19,11 +19,20 @@ from sys import exit
 import json
 import logging
 
-DEBUG = False
-JSON = False
-COLOR = False
-
 metadataurl="http://169.254.169.254/latest/meta-data/"
+
+config={'jsonenable': False, 'toolbarcolor': '#ansiblack bg:#ansiwhite', 'promptcolor': {'text': '#ansidarkgray bold', 'prompt': '#ansiblue bold'}, 'color': {'warning': 'red', 'detail': 'green', 'common': 'white'}, 'debug': True, 'colorenable': False}
+
+def setconfig(cfg):
+    global config
+    config=cfg
+    if DEBUG: 
+        print "SETCONFIG:", config
+
+DEBUG = config['debug'] 
+JSON = config['jsonenable'] 
+COLOR = config['colorenable'] 
+
 
 style = style_from_dict({
     Token.Text: '#ansidarkgray bold',

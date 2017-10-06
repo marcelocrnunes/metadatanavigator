@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from cli import * 
+from cli import *
 import yaml
 import argparse
 
@@ -16,7 +16,7 @@ args=parser.parse_args()
 with open(args.config,'r') as ymlfile:
     cfg = yaml.load(ymlfile)
 
-if args.debug or cfg['debug']: 
+if args.debug or cfg['debug']:
     setdebugstatus(True)
     print "ARGUMENTS: ",args
     for key, value in cfg.items():
@@ -25,7 +25,7 @@ if args.debug or cfg['debug']:
 if args.json or cfg['jsonenable']:
     setjsonstatus()
 
-if args.color or cfg['colorenable']: 
+if args.color or cfg['colorenable']:
     setcolorstatus()
 
 if args.path:
@@ -35,4 +35,5 @@ else:
    pipemode=False
    pipemodepath=None
 
+setconfig(cfg)
 climode(pipemode, pipemodepath)
