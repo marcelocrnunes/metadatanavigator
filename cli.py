@@ -2,6 +2,7 @@ from prompt_toolkit import prompt
 from prompt_toolkit.history import InMemoryHistory
 from prompt_toolkit.auto_suggest import Suggestion, AutoSuggest
 from prompt_toolkit.contrib.completers import WordCompleter
+from prompt_toolkit.completion import Completer, Completion
 from prompt_toolkit.shortcuts import clear
 from prompt_toolkit.styles import style_from_dict
 from prompt_toolkit.token import Token
@@ -69,7 +70,7 @@ Press "Ctrl-y" to toggle color mode (-c option on the commandline)
 PIPE MODE:
 Call the command with the "-p" argument. Call the command with "-h" for usage help.
 
-     """
+    """
     print colored("Metadata Navigator\n===================", warning, attrs=['bold'])
     print colored(HELP, detail)
 
@@ -87,7 +88,6 @@ def get_prompt_tokens(cli):
         (Token.TextNoColor, promptstr),
         (Token.ColonNoColor, '['+colonfill+']> '),
         ]
-
 
 def get_toolbar_tokens(cli):
     toolbarlist=[(Token.Toolbar,"")]
@@ -126,6 +126,20 @@ class SuggestMetadata(AutoSuggest):
         for choice in self.words:
             if choice.startswith(document.text.lower()):
                 return Suggestion(choice[len(document.text):])
+
+class CompleterAhead(Completer):
+    def __init__(self, words, url):
+        super(CompleterAhead, self).__init__()
+        self.words=words
+        self.url=url
+    def get_completions(self, document, complete_event):
+        currentword = document.get_word_under_cursor()
+        if currentword.endswith("/"):
+            self.words=(getmetadata(self.url+"/"+currentword))
+            print self.words, type(self.words)
+        for choice in self.words:
+            if choice.startswith(currentword.lower()):
+                yield Completion(choice, -len(currentword))
 
 def getjsonstatus():
     return JSON
@@ -209,14 +223,22 @@ def climode(pipe=False, pipemodepath="/"):
     gethelp()
     try:
         while True:
-            user_input = prompt(get_prompt_tokens=get_prompt_tokens,
+            currenturl=meta
+            if DEBUG: print "Current URL:",meta
+            try:
+                user_input = prompt(get_prompt_tokens=get_prompt_tokens,
                                 style=style,
                                 history=history,
                                 auto_suggest=SuggestMetadata(words),
                                 completer=setcompleter(words),
+                                #completer=CompleterAhead(cleandata, currenturl),
+                                #complete_while_typing=False,
+                                display_completions_in_columns=True,
                                 get_bottom_toolbar_tokens=get_toolbar_tokens,
                                 key_bindings_registry=manager.registry
                                 )
+            except KeyboardInterrupt:
+                exit(0)
             if user_input in set(ckeywords):
                 clear()
             elif user_input in set(exitkeywords):
@@ -225,7 +247,7 @@ def climode(pipe=False, pipemodepath="/"):
                 head, tail = split(colonfill.rstrip('/'))
                 colonfill=head
                 meta=metadataurl+"/"+colonfill
-                if DEBUG: print meta
+                if DEBUG: print "USER_INPUT DEBUG: ",meta
                 words, cleandata=setwords(getmetadata(meta))
             elif user_input in set(rkeywords):
                 colonfill="/"
