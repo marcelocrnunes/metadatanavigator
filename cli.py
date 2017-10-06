@@ -264,14 +264,15 @@ def climode(pipe=False, pipemodepath="/"):
                 head, tail = split(colonfill.rstrip('/'))
                 colonfill=head
                 meta=metadataurl+"/"+colonfill
-                if DEBUG: print "USER_INPUT DEBUG: ",meta
+                if DEBUG: print "USER_INPUT DEBUG (BACK): ",meta
                 words, cleandata=setwords(getmetadata(meta))
             elif user_input in set(rkeywords):
                 colonfill="/"
                 meta=metadataurl
+                if DEBUG: print "USER_INPUT DEBUG (RESET): ",meta
                 words, cleandata=setwords(getmetadata(meta))
             elif user_input in set(clikeywords):
-                if DEBUG: print("WORDS TYPE: %s",type(cleandata))
+                if DEBUG: print("USER_INPUT DEBUG (LIST): ",cleandata)
                 if JSON:
                     result=json.dumps({'metadata': cleandata}, indent=4)
                     if COLOR:
@@ -284,7 +285,7 @@ def climode(pipe=False, pipemodepath="/"):
                if not colonfill.endswith("/"): colonfill=colonfill+"/"
                colonfill=colonfill+user_input
                meta=meta+"/"+user_input
-               if DEBUG: print meta
+               if DEBUG: print("USER_INPUT DEBUG (CATEGORYLIST): ",cleandata)
                words, cleandata= setwords(getmetadata(meta))
             else:
                try:
@@ -300,6 +301,7 @@ def climode(pipe=False, pipemodepath="/"):
                    else:
                        filtered=colored(user_input,detail)+": "+colored(result.content,common)
                        print filtered
+                   if DEBUG: print("USER_INPUT DEBUG (CONTENT): ",filtered)
                except:
                    print colored("404 Not Found - Error\n\n", warning, attrs=['bold'])
                    gethelp()
