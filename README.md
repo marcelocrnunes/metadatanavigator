@@ -44,10 +44,10 @@ For a more in depth view of the tool:
 ### Prerequisites
 
 Python>=3 (Should work on Python>=2.7. No promises...)
-Pygments==2.1.1
-requests==1.2.3
-prompt_toolkit==1.0.15
-termcolor==1.1.0
+Pygments
+requests
+prompt_toolkit
+termcolor
 
 ### Installing
 
