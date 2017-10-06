@@ -7,60 +7,74 @@ from metadatanavigator import *
 import yaml
 import argparse
 
-parser = argparse.ArgumentParser()
-parser.add_argument("-d", "--debug", help="Debug Mode", action="store_true")
-parser.add_argument("-j", "--json", help="JSON output mode", action="store_true")
-parser.add_argument("-c", "--color", help="COLOR output mode", action="store_true")
-parser.add_argument("-C", "--config", help="Config file path [default mnavigator.yaml]",nargs='?',const="mnavigator.yaml", default="mnavigator.yaml")
-parser.add_argument("-p", "--path", help="Metadata PATH for pipe output mode [Disables INTERATIVE mode][DEFAULT ROOT]",nargs='?', const="/")
 
-args=parser.parse_args()
-
-try:
-    with open(args.config,'r') as ymlfile:
-        cfg = yaml.load(ymlfile)
-
-    if args.debug or cfg['debug']==True:
-        """
-        Enable debug.
-        """
-        setdebugstatus(True)
-        print ("ARGUMENTS: ",args)
-        print ("LOADED CONFIG: ", cfg)
-
-    if args.json or cfg['jsonenable']:
-        """
-        Enable JSON output.
-        """
-        setjsonstatus()
-
-    if args.color or cfg['colorenable']:
-        """
-        Enable COLOR output.
-        """
-        setcolorstatus()
-
-    if args.path:
-        """Enable PIPE mode"""
-        pipemode=True
-        pipemodepath=args.path
-    else:
-        """Disable PIPE mode"""
-        pipemode=False
-        pipemodepath=None
-
+def create_parser():
     """
-    Setup the rest of the configuration, like colors for the prompt and texts.
+    Create a configuration parser and parses the current configuration. 
     """
-    setconfig(cfg)
+    parser = argparse.ArgumentParser(description='A tool to navigate through AWS EC2 instance metadata')
+    parser.add_argument("-d", "--debug", help="Debug Mode", action="store_true")
+    parser.add_argument("-j", "--json", help="JSON output mode", action="store_true")
+    parser.add_argument("-c", "--color", help="COLOR output mode", action="store_true")
+    parser.add_argument("-C", "--config", help="Config file path [default mnavigator.yaml]",nargs='?',const="mnavigator.yaml", default="mnavigator.yaml")
+    parser.add_argument("-p", "--path", help="Metadata PATH for pipe output mode [Disables INTERATIVE mode][DEFAULT ROOT]",nargs='?', const="/")
+    args=parser.parse_args()
+    return args
 
+def main():
     """
-    Call tool's main function.
+    Main function. Handle configuration settings and metadata navigator's main functions. 
     """
-    mnavigator(pipemode, pipemodepath)
+    try:
+        args=create_parser()
 
-except IOError:
-    print("ERROR: Could not find YAML configuration file",args.config)
+        with open(args.config,'r') as ymlfile:
+            cfg = yaml.load(ymlfile)
 
-except Exception as e:
-    print("ERROR: Unrecoverable error: ",e)
+        if args.debug or cfg['debug']==True:
+            """
+            Enable debug.
+            """
+            setdebugstatus(True)
+            print ("ARGUMENTS: ",args)
+            print ("LOADED CONFIG: ", cfg)
+
+        if args.json or cfg['jsonenable']:
+            """
+            Enable JSON output.
+            """
+            setjsonstatus()
+
+        if args.color or cfg['colorenable']:
+            """
+            Enable COLOR output.
+            """
+            setcolorstatus()
+
+        if args.path:
+            """Enable PIPE mode"""
+            pipemode=True
+            pipemodepath=args.path
+        else:
+            """Disable PIPE mode"""
+            pipemode=False
+            pipemodepath=None
+
+        """
+        Setup the rest of the configuration, like colors for the prompt and texts.
+        """
+        setconfig(cfg)
+
+        """
+        Call tool's main function.
+        """
+        mnavigator(pipemode, pipemodepath)
+
+    except IOError:
+        print("ERROR: Could not find YAML configuration file",args.config)
+
+    except Exception as e:
+        print("ERROR: Unrecoverable error: ",e)
+
+if __name__ == '__main__':
+    main()
