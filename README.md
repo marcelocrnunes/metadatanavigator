@@ -5,13 +5,17 @@ Use this tool to navigate and query your AWS EC2 instance's metadata.
 ## Getting Started
 ```
 ./mnavigator.py -h
-usage: mnavigator [-h] [-d] [-j] [-c] [-p [PATH]]
+usage: mnavigator.py [-h] [-d] [-j] [-c] [-C [CONFIG]] [-p [PATH]]
+
+A tool to navigate through AWS EC2 instance metadata
 
 optional arguments:
   -h, --help            show this help message and exit
   -d, --debug           Debug Mode
   -j, --json            JSON output mode
   -c, --color           COLOR output mode
+  -C [CONFIG], --config [CONFIG]
+                        Config file path [default mnavigator.yaml]
   -p [PATH], --path [PATH]
                         Metadata PATH for pipe output mode [Disables
                         INTERATIVE mode][DEFAULT ROOT]
@@ -43,11 +47,12 @@ For a more in depth view of the tool:
 
 ### Prerequisites
 
-Python>=3 (Should work on Python>=2.7. No promises...)
-Pygments
-requests
-prompt_toolkit
-termcolor
+* Python>=3 (Should work on Python>=2.7. No promises...)
+* Pygments==2.1.1
+* termcolor==1.1.0
+* prompt_toolkit==1.0.15
+* requests==2.18.4
+* PyYAML==3.12
 
 ### Installing
 
