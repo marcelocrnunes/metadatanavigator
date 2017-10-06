@@ -26,15 +26,15 @@ COLOR = False
 metadataurl="http://169.254.169.254/latest/meta-data/"
 
 style = style_from_dict({
-    Token.Text: '#767676 bold',
-    Token.Colon: '#00ffff bold',
-    Token.Color: '#333333 bg:#ffffff bold',
-    Token.Json: '#333333 bg:#ffffff bold',
-    Token.Toolbar: '#333333 bg:#ffffff',
-    Token.ColorR: '#333333 bg:#ffffff bold reverse',
-    Token.JsonR: '#333333 bg:#ffffff bold reverse',
-    Token.TextNoColor: '#ffffff bold',
-    Token.ColonNoColor: '#ffffff bold'
+    Token.Text: '#ansidarkgray bold',
+    Token.Colon: '#ansiblue bold',
+    Token.Color: '#ansiblack bg:#ansiwhite bold',
+    Token.Json: '#ansiblack bg:#ansiwhite bold',
+    Token.Toolbar: '#ansiblack bg:#ansiwhite',
+    Token.ColorR: '#ansiblack bg:#ansiwhite bold reverse',
+    Token.JsonR: '#ansiblack bg:#ansiwhite bold reverse',
+    Token.TextNoColor: '#ansiwhite bold',
+    Token.ColonNoColor: '#ansiwhite bold'
 
 })
 

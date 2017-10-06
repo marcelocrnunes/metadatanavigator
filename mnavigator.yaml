@@ -1,0 +1,15 @@
+color:
+        detail: green
+        warning: red
+        common: white
+
+promptcolor:
+        text: "#ansidarkgray bold"
+        prompt: "#ansiblue bold"
+
+toolbarcolor: "#ansiblack bg:#ansiwhite"
+
+colorenable: False
+jsonenable: False
+debug: True 
+        
