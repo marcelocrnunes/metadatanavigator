@@ -16,7 +16,7 @@ args=parser.parse_args()
 with open(args.config,'r') as ymlfile:
     cfg = yaml.load(ymlfile)
 
-if args.debug or cfg['debug']:
+if args.debug or cfg['debug']==True:
     setdebugstatus(True)
     print "ARGUMENTS: ",args
     print "LOADED CONFIG: ", cfg 

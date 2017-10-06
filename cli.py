@@ -21,7 +21,7 @@ import logging
 
 metadataurl="http://169.254.169.254/latest/meta-data/"
 
-config={'jsonenable': False, 'toolbarcolor': '#ansiblack bg:#ansiwhite', 'promptcolor': {'text': '#ansidarkgray bold', 'prompt': '#ansiblue bold'}, 'color': {'warning': 'red', 'detail': 'green', 'common': 'white'}, 'debug': True, 'colorenable': False}
+config={'jsonenable': False, 'toolbarcolor': '#ansiblack bg:#ansiwhite', 'promptcolor': {'text': '#ansidarkgray bold', 'prompt': '#ansiblue bold'}, 'color': {'warning': 'red', 'detail': 'green', 'common': 'white'}, 'debug': False, 'colorenable': False}
 
 def setconfig(cfg):
     global config
@@ -59,7 +59,6 @@ if COLOR:
     detail=config['color']['detail']
     warning=config['color']['warning']
 else:
-    common=config['color']['common']
     detail=common
     warning=common
 
@@ -184,6 +183,8 @@ def setcolorstatus():
 
 def setdebugstatus(onoff=False):
     global DEBUG
+    if DEBUG:
+        print "SETDEBUGSTATUS:", DEBUG
     DEBUG=onoff
 
 manager = KeyBindingManager.for_prompt()

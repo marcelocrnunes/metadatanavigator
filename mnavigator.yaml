@@ -1,7 +1,7 @@
 color:
         detail: green
         warning: red
-        common: white
+        common: white #if colorenable is False, this will be the default fg color 
 
 promptcolor:
         text: "#ansidarkgray bold"
@@ -10,6 +10,6 @@ promptcolor:
 toolbarcolor: "#ansiblack bg:#ansiwhite"
 
 colorenable: False
-jsonenable: False
-debug: True 
+jsonenable: True 
+debug: False
         
