@@ -10,7 +10,7 @@ import argparse
 
 def create_parser():
     """
-    Create a configuration parser and parses the current configuration. 
+    Create a configuration parser and parses the commandline configuration. 
     """
     parser = argparse.ArgumentParser(description='A tool to navigate through AWS EC2 instance metadata')
     parser.add_argument("-d", "--debug", help="Debug Mode", action="store_true")
