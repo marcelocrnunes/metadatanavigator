@@ -7,7 +7,7 @@ metadatanavigator.py
 
 All the logic behind the tool.
 The init script will handle config and command line arguments and call the specific functions to configure the tool. 
-For both modes (interative/pipe) the init script (mnavigator) will call  the function mnavigator. Mnavigator fuction will handle the mode of usage of the tool.  
+For both modes (interative/pipe) the init script (mnavigator.py) will call  the function mnavigator. Mnavigator fuction will handle the mode of usage of the tool.  
 
 """
 
@@ -37,6 +37,9 @@ metadataurl="http://169.254.169.254/latest/meta-data/"
 config={'jsonenable': False, 'toolbarcolor': '#ansiblack bg:#ansiwhite', 'promptcolor': {'text': '#ansidarkgray bold', 'prompt': '#ansiblue bold'}, 'color': {'warning': 'red', 'detail': 'green', 'common': 'white'}, 'debug': False, 'colorenable': False}
 
 def setconfig(cfg):
+    """
+    Sets global configuration from commandline arguments and YAML configfile (mnavigator.py)
+    """
     global config
     config=cfg
     if DEBUG:
@@ -76,6 +79,9 @@ else:
     warning=common
 
 def gethelp():
+    """
+    Display tool help. Usually called after an exception if DEBUG is disable. 
+    """
     HELP= """
 INTERATIVE MODE:
 Press ENTER, l, or list to view available metadata options.
@@ -99,6 +105,9 @@ promptstr=str('Metadata Navigator')
 colonfill='/'
 
 def get_prompt_tokens(cli):
+    """
+    Return prompt tokens for custom prompt. 
+    """
     if COLOR:
         return [
         (Token.Text, promptstr),
@@ -111,6 +120,9 @@ def get_prompt_tokens(cli):
         ]
 
 def get_toolbar_tokens(cli):
+    """
+    Return toolbar tokens for custom toolbar. 
+    """
     toolbarlist=[(Token.Toolbar,"")]
     if COLOR:
         toolbarlist.append((Token.Color,"[color] "))
@@ -123,12 +135,23 @@ def get_toolbar_tokens(cli):
     return toolbarlist
 
 def setcompleter(words):
+    """
+    Return WordCompleter object to prompt. This will be used to populate the AutoCompletion prompt-toolkit function. 
+    """
     return WordCompleter(words, ignore_case=True)
 
 def setwords(content):
+    """
+    Return two lists. 
+    The first list contains all possible inputs to be used by the AutoSuggestion feature of prompt-toolkit. 
+    The second list contains all possible metadata input only, without tool comands. This is usefull to send a clean list of possible metadata options to the user when the l|list command is issued.  
+    """
     return content+exitkeywords+clikeywords+bkeywords+rkeywords+ckeywords, content
 
 def getmetadata(url):
+    """
+    Call the metadata api at url and return a list of text results from the request call to the Metadata api. 
+    """
     try:
         req = request("GET",url)
         if not req.ok:
@@ -145,6 +168,9 @@ def getmetadata(url):
         return []
 
 class SuggestMetadata(AutoSuggest):
+    """
+    Custom AutoSuggest object used by the prompt-toolkit prompt. Return suggestions based on the current metadata available at the current path and possible tool commands. 
+    """
     def __init__(self, words):
         super(SuggestMetadata, self).__init__()
         self.words=words
@@ -154,6 +180,10 @@ class SuggestMetadata(AutoSuggest):
                 return Suggestion(choice[len(document.text):])
 
 class CompleterAhead(Completer):
+    """
+    WIP:
+        A custom Completer object to be used by the prompt-toolkit. At the moment, I am using the WordCompleter builtin object. The idea here is to find a way to, based on the current input word under cursor, read ahead from the metadata api e return possible "future" inputs. 
+    """
     def __init__(self, words, url):
         super(CompleterAhead, self).__init__()
         self.words=words
@@ -168,9 +198,18 @@ class CompleterAhead(Completer):
                 yield Completion(choice, -len(currentword))
 
 def getjsonstatus():
+    """
+    Return global JSON boolean. 
+    Enable=True
+    Disable=False
+    The global variable will determine if the cli output should be formatted in JSON. 
+    """
     return JSON
 
 def setjsonstatus():
+    """
+    Turn JSON output format on/off. 
+    """
     global JSON
     if JSON:
         JSON=False
@@ -180,9 +219,18 @@ def setjsonstatus():
         print("SETJSONSTATUS: ", JSON)
 
 def getcolorstatus():
+    """
+    Return global COLOR boolean. 
+    Enable=True
+    Disable=False
+    This global variable will determine if the cli should be colored. 
+    """
     return COLOR
 
 def setcolorstatus():
+    """
+    Turn colored output format on/off.
+    """
     global COLOR
     global warning, common, detail, config
     if COLOR:
@@ -198,6 +246,9 @@ def setcolorstatus():
         print("SETCOLORSTATUS: STATUS, settings", COLOR, common, warning, detail)
 
 def setdebugstatus(onoff=False):
+    """
+    Turn custom DEBUG mode on/off
+    """
     global DEBUG
     if DEBUG:
         print("SETDEBUGSTATUS:", DEBUG)
@@ -206,6 +257,9 @@ def setdebugstatus(onoff=False):
 manager = KeyBindingManager.for_prompt()
 @manager.registry.add_binding(Keys.ControlT)
 def _(event):
+    """
+    This prompt-toolkit custom KEY binding event for Ctrl+T will turn the JSON output format support on/off calling setjsonstatus() function.
+    """
     def setjson():
         if getjsonstatus():
             setjsonstatus()
@@ -217,6 +271,9 @@ def _(event):
 
 @manager.registry.add_binding(Keys.ControlY)
 def _(event):
+    """
+    This prompt-toolkit custom KEY binding event for Ctrl+Y will turn the colored output format support on/off calling setjsonstatus() function.
+    """
     def setcolor():
         if getcolorstatus():
             setcolorstatus()
@@ -227,6 +284,12 @@ def _(event):
     event.cli.run_in_terminal(setcolor)
 
 def pipemode(pipemodepath="/"):
+    """
+    This function will be called by mnavigator when the tool is used with the -p PATH parameter. The function will get the metadata available at PATH and return it directly to the SHELL, based on the output format configured.
+
+    Keywords arguments: 
+        pipemodepath -- URL string of the metadata queried. Default = root. 
+    """
     global JSON
     global COLOR
     words=getmetadata(metadataurl+"/"+pipemodepath)
@@ -243,6 +306,15 @@ def pipemode(pipemodepath="/"):
             print(colored(pipemodepath+":",detail),colored(words.pop(), common))
 
 def mnavigator(pipe=False, pipemodepath="/"):
+    """
+    This function will be called by mnavigator after handling arguments and YAML config setup. 
+    If pipe=True, the function will enter the interactive mode in a while loop that will handle user input using a prompt-toolkit configured prompt. 
+    If pipe=False, the function will enter the "pipe" mode and will call the pipemode function using the pipemodepath as argument. 
+
+    Keywords arguments: 
+        pipe -- BOOLEAN that will set the tool use mode (INTERACTIVE|PIPE)
+        pipemodepath -- URL string of the metadata queried. Default = root. 
+    """
     global colonfill
     global JSON
     global COLOR
@@ -252,7 +324,7 @@ def mnavigator(pipe=False, pipemodepath="/"):
     history=InMemoryHistory()
     if pipe:
        pipemode(pipemodepath)
-       exit()
+       exit(0)
     gethelp()
     try:
         while True:
