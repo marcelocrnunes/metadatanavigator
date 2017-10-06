@@ -26,22 +26,21 @@ config={'jsonenable': False, 'toolbarcolor': '#ansiblack bg:#ansiwhite', 'prompt
 def setconfig(cfg):
     global config
     config=cfg
-    if DEBUG: 
+    if DEBUG:
         print "SETCONFIG:", config
 
-DEBUG = config['debug'] 
-JSON = config['jsonenable'] 
-COLOR = config['colorenable'] 
-
+DEBUG = config['debug']
+JSON = config['jsonenable']
+COLOR = config['colorenable']
 
 style = style_from_dict({
-    Token.Text: '#ansidarkgray bold',
-    Token.Colon: '#ansiblue bold',
-    Token.Color: '#ansiblack bg:#ansiwhite bold',
-    Token.Json: '#ansiblack bg:#ansiwhite bold',
-    Token.Toolbar: '#ansiblack bg:#ansiwhite',
-    Token.ColorR: '#ansiblack bg:#ansiwhite bold reverse',
-    Token.JsonR: '#ansiblack bg:#ansiwhite bold reverse',
+    Token.Text: config['promptcolor']['text'],
+    Token.Colon: config['promptcolor']['prompt'],
+    Token.Color: config['toolbarcolor']+' bold',
+    Token.Json: config['toolbarcolor']+' bold',
+    Token.Toolbar: config['toolbarcolor'],
+    Token.ColorR: config['toolbarcolor']+' bold reverse',
+    Token.JsonR: config['toolbarcolor']+' bold reverse',
     Token.TextNoColor: '#ansiwhite bold',
     Token.ColonNoColor: '#ansiwhite bold'
 
@@ -54,12 +53,13 @@ rkeywords=["r","reset"]
 ckeywords=["c","clear"]
 
 
-common="white"
+common=config['color']['common']
 
 if COLOR:
-    detail="green"
-    warning="red"
+    detail=config['color']['detail']
+    warning=config['color']['warning']
 else:
+    common=config['color']['common']
     detail=common
     warning=common
 
@@ -121,6 +121,8 @@ def getmetadata(url):
         req = request("GET",url)
         if not req.ok:
             raise
+        if DEBUG: 
+            print "GETMETADATA: ", req
         return req.content.split('\n')
     except:
         print colored("404 Not Found - Error\n\n", warning, attrs=['bold'])
@@ -159,21 +161,26 @@ def setjsonstatus():
         JSON=False
     else:
        JSON=True
+    if DEBUG:
+        print "SETJSONSTATUS: ", JSON
 
 def getcolorstatus():
     return COLOR
 
 def setcolorstatus():
     global COLOR
-    global warning, common, detail
+    global warning, common, detail, config
     if COLOR:
         COLOR=False
+        common=config['color']['common']
         warning=common
         detail=common
     else:
        COLOR=True
-       warning="red"
-       detail="green"
+       warning=config['color']['warning']
+       detail=config['color']['detail']
+    if DEBUG:
+        print "SETCOLORSTATUS: STATUS, settings", COLOR, common, warning, detail
 
 def setdebugstatus(onoff=False):
     global DEBUG

@@ -19,8 +19,7 @@ with open(args.config,'r') as ymlfile:
 if args.debug or cfg['debug']:
     setdebugstatus(True)
     print "ARGUMENTS: ",args
-    for key, value in cfg.items():
-        print key, value
+    print "LOADED CONFIG: ", cfg 
 
 if args.json or cfg['jsonenable']:
     setjsonstatus()
