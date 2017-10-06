@@ -4,7 +4,7 @@ Use this tool to navigate and query your AWS EC2 instance's metadata.
 
 ## Getting Started
 ```
-./mnavigator -h
+./mnavigator.py -h
 usage: mnavigator [-h] [-d] [-j] [-c] [-p [PATH]]
 
 optional arguments:
@@ -18,7 +18,7 @@ optional arguments:
 ```
 
 ```
-./mnavigator
+./mnavigator.py
 Metadata Navigator
 ===================
 
@@ -43,6 +43,7 @@ For a more in depth view of the tool:
 
 ### Prerequisites
 
+Python>=3 (Should work on Python>=2.7. No promises...)
 Pygments==2.1.1
 requests==1.2.3
 prompt_toolkit==1.0.15

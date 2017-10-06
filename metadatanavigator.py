@@ -1,3 +1,16 @@
+"""
+
+Metadata Navigator
+==================
+metadatanavigator.py
+======
+
+All the logic behind the tool.
+The init script will handle config and command line arguments and call the specific functions to configure the tool. 
+For both modes (interative/pipe) the init script (mnavigator) will call  the function mnavigator. Mnavigator fuction will handle the mode of usage of the tool.  
+
+"""
+
 from prompt_toolkit import prompt
 from prompt_toolkit.history import InMemoryHistory
 from prompt_toolkit.auto_suggest import Suggestion, AutoSuggest
@@ -27,7 +40,7 @@ def setconfig(cfg):
     global config
     config=cfg
     if DEBUG:
-        print "SETCONFIG:", config
+        print("SETCONFIG:", config)
 
 DEBUG = config['debug']
 JSON = config['jsonenable']
@@ -79,10 +92,10 @@ PIPE MODE:
 Call the command with the "-p" argument. Call the command with "-h" for usage help.
 
     """
-    print colored("Metadata Navigator\n===================", warning, attrs=['bold'])
-    print colored(HELP, detail)
+    print(colored("Metadata Navigator\n===================", warning, attrs=['bold']))
+    print(colored(HELP, detail))
 
-promptstr=unicode('Metadata Navigator')
+promptstr=str('Metadata Navigator')
 colonfill='/'
 
 def get_prompt_tokens(cli):
@@ -121,10 +134,13 @@ def getmetadata(url):
         if not req.ok:
             raise
         if DEBUG: 
-            print "GETMETADATA: ", req
-        return req.content.split('\n')
+            print("GETMETADATA: ", req, req.text)
+        return req.text.split('\n')
     except:
-        print colored("404 Not Found - Error\n\n", warning, attrs=['bold'])
+        print(colored("404 Not Found - Error\n\n", warning, attrs=['bold']))
+        if DEBUG:
+            print(logging.exception("Stack:"))
+            exit(1)
         gethelp()
         return []
 
@@ -146,7 +162,7 @@ class CompleterAhead(Completer):
         currentword = document.get_word_under_cursor()
         if currentword.endswith("/"):
             self.words=(getmetadata(self.url+"/"+currentword))
-            print self.words, type(self.words)
+            print(self.words, type(self.words))
         for choice in self.words:
             if choice.startswith(currentword.lower()):
                 yield Completion(choice, -len(currentword))
@@ -161,7 +177,7 @@ def setjsonstatus():
     else:
        JSON=True
     if DEBUG:
-        print "SETJSONSTATUS: ", JSON
+        print("SETJSONSTATUS: ", JSON)
 
 def getcolorstatus():
     return COLOR
@@ -179,12 +195,12 @@ def setcolorstatus():
        warning=config['color']['warning']
        detail=config['color']['detail']
     if DEBUG:
-        print "SETCOLORSTATUS: STATUS, settings", COLOR, common, warning, detail
+        print("SETCOLORSTATUS: STATUS, settings", COLOR, common, warning, detail)
 
 def setdebugstatus(onoff=False):
     global DEBUG
     if DEBUG:
-        print "SETDEBUGSTATUS:", DEBUG
+        print("SETDEBUGSTATUS:", DEBUG)
     DEBUG=onoff
 
 manager = KeyBindingManager.for_prompt()
@@ -193,10 +209,10 @@ def _(event):
     def setjson():
         if getjsonstatus():
             setjsonstatus()
-            print colored('json mode off',warning)
+            print(colored('json mode off',warning))
         else:
             setjsonstatus()
-            print colored('json mode on',warning)
+            print(colored('json mode on',warning))
     event.cli.run_in_terminal(setjson)
 
 @manager.registry.add_binding(Keys.ControlY)
@@ -204,10 +220,10 @@ def _(event):
     def setcolor():
         if getcolorstatus():
             setcolorstatus()
-            print colored('color mode off',warning)
+            print(colored('color mode off',warning))
         else:
             setcolorstatus()
-            print colored('color mode on',warning)
+            print(colored('color mode on',warning))
     event.cli.run_in_terminal(setcolor)
 
 def pipemode(pipemodepath="/"):
@@ -217,16 +233,16 @@ def pipemode(pipemodepath="/"):
     if JSON:
         result=json.dumps({pipemodepath: words}, indent=4)
         if COLOR:
-            print (highlight(result,JsonLexer(), TerminalFormatter()))
+            print((highlight(result,JsonLexer(), TerminalFormatter())))
         else:
-            print result
+            print(result)
     else:
         if len(words)>1:
-            print colored(words, detail)
+            print(colored(words, detail))
         else:
-            print colored(pipemodepath+":",detail),colored(words.pop(), common)
+            print(colored(pipemodepath+":",detail),colored(words.pop(), common))
 
-def climode(pipe=False, pipemodepath="/"):
+def mnavigator(pipe=False, pipemodepath="/"):
     global colonfill
     global JSON
     global COLOR
@@ -241,7 +257,7 @@ def climode(pipe=False, pipemodepath="/"):
     try:
         while True:
             currenturl=meta
-            if DEBUG: print ("Current URL DEBUG:",meta)
+            if DEBUG: print("Current URL DEBUG:",meta)
             try:
                 user_input = prompt(get_prompt_tokens=get_prompt_tokens,
                                 style=style,
@@ -264,23 +280,23 @@ def climode(pipe=False, pipemodepath="/"):
                 head, tail = split(colonfill.rstrip('/'))
                 colonfill=head
                 meta=metadataurl+"/"+colonfill
-                if DEBUG: print "USER_INPUT DEBUG (BACK): ",meta
+                if DEBUG: print("USER_INPUT DEBUG (BACK): ",meta)
                 words, cleandata=setwords(getmetadata(meta))
             elif user_input in set(rkeywords):
                 colonfill="/"
                 meta=metadataurl
-                if DEBUG: print "USER_INPUT DEBUG (RESET): ",meta
+                if DEBUG: print("USER_INPUT DEBUG (RESET): ",meta)
                 words, cleandata=setwords(getmetadata(meta))
             elif user_input in set(clikeywords):
                 if DEBUG: print("USER_INPUT DEBUG (LIST): ",cleandata)
                 if JSON:
                     result=json.dumps({'metadata': cleandata}, indent=4)
                     if COLOR:
-                        print (highlight(result,JsonLexer(), TerminalFormatter()))
+                        print(highlight(result,JsonLexer(), TerminalFormatter()))
                     else:
-                        print result
+                        print(result)
                 else:
-                    print colored(cleandata,detail)
+                    print(colored(cleandata,detail))
             elif '/' in user_input:
                if not colonfill.endswith("/"): colonfill=colonfill+"/"
                colonfill=colonfill+user_input
@@ -293,19 +309,22 @@ def climode(pipe=False, pipemodepath="/"):
                    if not result.ok:
                         raise
                    if JSON:
-                       filtered=json.dumps({user_input:result.content})
+                       filtered=json.dumps({user_input:result.text})
                        if COLOR:
                            print(highlight(filtered, JsonLexer(), TerminalFormatter()))
                        else:
-                           print filtered
+                           print(filtered)
                    else:
-                       filtered=colored(user_input,detail)+": "+colored(result.content,common)
-                       print filtered
+                       filtered=colored(user_input,detail)+": "+colored(result.text,common)
+                       print(filtered)
                    if DEBUG: print("USER_INPUT DEBUG (CONTENT): ",filtered)
-               except:
-                   print colored("404 Not Found - Error\n\n", warning, attrs=['bold'])
+               except Exception as e:
+                   print(colored("404 Not Found - Error\n\n", warning, attrs=['bold']))
+                   if DEBUG:
+                       print(logging.exception("Stack:"))
+                       exit(1)
                    gethelp()
     except Exception as e:
-        print colored("Unrecoverable Error", warning, attrs=['bold'])
-        if DEBUG: print colored(logging.exception("Stack:"), 'green')
+        print(colored("Unrecoverable Error", warning, attrs=['bold']))
+        if DEBUG: print(colored(logging.exception("Stack:"), 'green'))
 

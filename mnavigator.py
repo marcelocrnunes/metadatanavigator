@@ -1,6 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
-from cli import *
+from metadatanavigator import *
 import yaml
 import argparse
 
@@ -18,8 +18,8 @@ with open(args.config,'r') as ymlfile:
 
 if args.debug or cfg['debug']==True:
     setdebugstatus(True)
-    print "ARGUMENTS: ",args
-    print "LOADED CONFIG: ", cfg 
+    print ("ARGUMENTS: ",args)
+    print ("LOADED CONFIG: ", cfg)
 
 if args.json or cfg['jsonenable']:
     setjsonstatus()
@@ -35,4 +35,4 @@ else:
    pipemodepath=None
 
 setconfig(cfg)
-climode(pipemode, pipemodepath)
+mnavigator(pipemode, pipemodepath)
