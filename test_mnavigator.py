@@ -1,13 +1,14 @@
 from mnavigator import create_parser
-from unittest import TestCase
+from argparse import Namespace
 
-class CLITestCase(TestCase):
+import unittest
 
-    @classmethod
-    def setUpClass(cls):
-        parser = create_parser()
-        cls.parser = parser
+class MnavigatorTests(unittest.TestCase):
 
-class mnavigatorTestCase(CLITestCase):
-    def test_with_empty_args():
-        self.parser.parse_args([])
+    def test_create_parser(self):
+        args=create_parser()
+        self.assertIs(type(args),Namespace) 
+
+
+if __name__ == '__main__': 
+    unittest.main()
