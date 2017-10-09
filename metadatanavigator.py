@@ -148,7 +148,7 @@ def setwords(content):
     """
     return content+exitkeywords+clikeywords+bkeywords+rkeywords+ckeywords, content
 
-def getmetadata(url):
+def getmetadata(url=metadataurl):
     """
     Call the metadata api at url and return a list of text results from the request call to the Metadata api. 
     """
