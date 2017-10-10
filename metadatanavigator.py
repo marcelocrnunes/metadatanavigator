@@ -305,11 +305,98 @@ def pipemode(pipemodepath="/"):
         else:
             print(colored(pipemodepath+":",detail),colored(words.pop(), common))
 
+def processUserInput(user_input, meta, w, c):
+    """
+    This function will process userinput and return words,cleandata and True/False if it was able to proper process the input. 
+    """
+    global colonfill
+    global JSON
+    global COLOR
+
+    try:
+
+       if user_input in set(ckeywords):
+           """Just clear the screehn"""
+           clear()
+           return meta, w, c, True
+
+       elif user_input in set(exitkeywords):
+           """Exit tool"""
+           exit(0)
+
+       elif user_input in set(bkeywords):
+           """Go back one path"""
+           head, tail = split(colonfill.rstrip('/'))
+           colonfill=head
+           meta=metadataurl+"/"+colonfill
+           if DEBUG: print("USER_INPUT DEBUG (BACK): ",meta)
+           w, c=setwords(getmetadata(meta))
+           return meta, w, c, True
+
+       elif user_input in set(rkeywords):
+           """Reset metadata path"""
+           colonfill="/"
+           meta=metadataurl
+           if DEBUG: print("USER_INPUT DEBUG (RESET): ",meta)
+           w, c = setwords(getmetadata(meta))
+           return meta, w, c, True
+
+       elif user_input in set(clikeywords):
+           """List current path options"""
+           if DEBUG: print("USER_INPUT DEBUG (LIST): ",c)
+           if JSON:
+               result=json.dumps({'metadata': c}, indent=4)
+               if COLOR:
+                   print(highlight(result,JsonLexer(), TerminalFormatter()))
+               else:
+                   print(result)
+           else:
+               print(colored(c,detail))
+           return meta, w, c, True
+
+       elif '/' in user_input:
+           """Enter new path"""
+           if not colonfill.endswith("/"): colonfill=colonfill+"/"
+           colonfill=colonfill+user_input
+           meta=meta+"/"+user_input
+           if DEBUG: print("USER_INPUT DEBUG (CATEGORYLIST): ",c)
+           w, c= setwords(getmetadata(meta))
+           return meta, w, c, True
+
+       else:
+           """Print metadata value"""
+           try:
+               result=request("GET",meta+"/"+user_input)
+               if not result.ok:
+                    raise
+               if JSON:
+                   filtered=json.dumps({user_input:result.text})
+                   if COLOR:
+                       print(highlight(filtered, JsonLexer(), TerminalFormatter()))
+                   else:
+                       print(filtered)
+               else:
+                   filtered=colored(user_input,detail)+": "+colored(result.text,common)
+                   print(filtered)
+               if DEBUG: print("USER_INPUT DEBUG (CONTENT): ",filtered)
+               return meta, w, c, True
+           except Exception as e:
+               print(colored("404 Not Found - Error\n\n", warning, attrs=['bold']))
+               if DEBUG:
+                   print(logging.exception("Stack:"))
+               gethelp()
+               return meta, w, c, False
+
+    except Exception as e:
+        print(colored("Unrecoverable Error", warning, attrs=['bold']))
+        if DEBUG: print(colored(logging.exception("Stack:"), 'green'))
+        exit(1)
+
 def mnavigator(pipe=False, pipemodepath="/"):
     """
     This function will be called by mnavigator after handling arguments and YAML config setup. 
-    If pipe=True, the function will enter the interactive mode in a while loop that will handle user input using a prompt-toolkit configured prompt. 
-    If pipe=False, the function will enter the "pipe" mode and will call the pipemode function using the pipemodepath as argument. 
+    If pipe=True, the function will enter the interactive mode in a while loop that will handle user input using a prompt-toolkit configured prompt.
+    If pipe=False, the function will enter the "pipe" mode and will call the pipemode function using the pipemodepath as argument.
 
     Keywords arguments: 
         pipe -- BOOLEAN that will set the tool use mode (INTERACTIVE|PIPE)
@@ -344,6 +431,9 @@ def mnavigator(pipe=False, pipemodepath="/"):
                                 )
             except KeyboardInterrupt:
                 exit(0)
+            meta, words, cleandata, result=processUserInput(user_input, meta, words, cleandata)
+
+            """
             if user_input in set(ckeywords):
                 clear()
             elif user_input in set(exitkeywords):
@@ -396,6 +486,7 @@ def mnavigator(pipe=False, pipemodepath="/"):
                        print(logging.exception("Stack:"))
                        exit(1)
                    gethelp()
+            """
     except Exception as e:
         print(colored("Unrecoverable Error", warning, attrs=['bold']))
         if DEBUG: print(colored(logging.exception("Stack:"), 'green'))
