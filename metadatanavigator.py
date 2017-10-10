@@ -158,14 +158,14 @@ def getmetadata(url=metadataurl):
             raise
         if DEBUG: 
             print("GETMETADATA: ", req, req.text)
-        return req.text.split('\n')
+        return req.text.split('\n') 
     except:
         print(colored("404 Not Found - Error\n\n", warning, attrs=['bold']))
         if DEBUG:
             print(logging.exception("Stack:"))
             exit(1)
         gethelp()
-        return []
+        raise
 
 class SuggestMetadata(AutoSuggest):
     """
@@ -292,18 +292,22 @@ def pipemode(pipemodepath="/"):
     """
     global JSON
     global COLOR
-    words=getmetadata(metadataurl+"/"+pipemodepath)
-    if JSON:
-        result=json.dumps({pipemodepath: words}, indent=4)
-        if COLOR:
-            print((highlight(result,JsonLexer(), TerminalFormatter())))
+    try:
+        words=getmetadata(metadataurl+"/"+pipemodepath)
+        if JSON:
+            result=json.dumps({pipemodepath: words}, indent=4)
+            if COLOR:
+                print((highlight(result,JsonLexer(), TerminalFormatter())))
+            else:
+                print(result)
         else:
-            print(result)
-    else:
-        if len(words)>1:
-            print(colored(words, detail))
-        else:
-            print(colored(pipemodepath+":",detail),colored(words.pop(), common))
+            if len(words)>1:
+                print(colored(words, detail))
+            else:
+                print(colored(pipemodepath+":",detail),colored(words.pop(), common))
+        return True
+    except:
+        return False
 
 def processUserInput(user_input, meta, w, c):
     """
@@ -356,12 +360,19 @@ def processUserInput(user_input, meta, w, c):
 
        elif '/' in user_input:
            """Enter new path"""
-           if not colonfill.endswith("/"): colonfill=colonfill+"/"
-           colonfill=colonfill+user_input
-           meta=meta+"/"+user_input
-           if DEBUG: print("USER_INPUT DEBUG (CATEGORYLIST): ",c)
-           w, c= setwords(getmetadata(meta))
-           return meta, w, c, True
+           try:
+               if not colonfill.endswith("/"): colonfill=colonfill+"/"
+               colonfill=colonfill+user_input
+               meta=meta+"/"+user_input
+               if DEBUG: print("USER_INPUT DEBUG (CATEGORYLIST): ",c)
+               w, c= setwords(getmetadata(meta))
+               return meta, w, c, True
+           except Exception as e:
+               print(colored("404 Not Found - Error\n\n", warning, attrs=['bold']))
+               if DEBUG:
+                   print(logging.exception("Stack:"))
+               gethelp()
+               return meta, w, c, False
 
        else:
            """Print metadata value"""
@@ -389,8 +400,9 @@ def processUserInput(user_input, meta, w, c):
 
     except Exception as e:
         print(colored("Unrecoverable Error", warning, attrs=['bold']))
-        if DEBUG: print(colored(logging.exception("Stack:"), 'green'))
-        exit(1)
+        if DEBUG: 
+            print(colored(logging.exception("Stack:"), 'green'))
+            exit(1)
 
 def mnavigator(pipe=False, pipemodepath="/"):
     """
@@ -410,8 +422,12 @@ def mnavigator(pipe=False, pipemodepath="/"):
     words, cleandata = setwords(metadatalist)
     history=InMemoryHistory()
     if pipe:
-       pipemode(pipemodepath)
-       exit(0)
+       piperesult=pipemode(pipemodepath)
+       if piperesult:
+           exit(0)
+       else:
+           if DEBUG: raise
+           exit(1) 
     gethelp()
     try:
         while True:
@@ -433,61 +449,8 @@ def mnavigator(pipe=False, pipemodepath="/"):
                 exit(0)
             meta, words, cleandata, result=processUserInput(user_input, meta, words, cleandata)
 
-            """
-            if user_input in set(ckeywords):
-                clear()
-            elif user_input in set(exitkeywords):
-                exit(0)
-            elif user_input in set(bkeywords):
-                head, tail = split(colonfill.rstrip('/'))
-                colonfill=head
-                meta=metadataurl+"/"+colonfill
-                if DEBUG: print("USER_INPUT DEBUG (BACK): ",meta)
-                words, cleandata=setwords(getmetadata(meta))
-            elif user_input in set(rkeywords):
-                colonfill="/"
-                meta=metadataurl
-                if DEBUG: print("USER_INPUT DEBUG (RESET): ",meta)
-                words, cleandata=setwords(getmetadata(meta))
-            elif user_input in set(clikeywords):
-                if DEBUG: print("USER_INPUT DEBUG (LIST): ",cleandata)
-                if JSON:
-                    result=json.dumps({'metadata': cleandata}, indent=4)
-                    if COLOR:
-                        print(highlight(result,JsonLexer(), TerminalFormatter()))
-                    else:
-                        print(result)
-                else:
-                    print(colored(cleandata,detail))
-            elif '/' in user_input:
-               if not colonfill.endswith("/"): colonfill=colonfill+"/"
-               colonfill=colonfill+user_input
-               meta=meta+"/"+user_input
-               if DEBUG: print("USER_INPUT DEBUG (CATEGORYLIST): ",cleandata)
-               words, cleandata= setwords(getmetadata(meta))
-            else:
-               try:
-                   result=request("GET",meta+"/"+user_input)
-                   if not result.ok:
-                        raise
-                   if JSON:
-                       filtered=json.dumps({user_input:result.text})
-                       if COLOR:
-                           print(highlight(filtered, JsonLexer(), TerminalFormatter()))
-                       else:
-                           print(filtered)
-                   else:
-                       filtered=colored(user_input,detail)+": "+colored(result.text,common)
-                       print(filtered)
-                   if DEBUG: print("USER_INPUT DEBUG (CONTENT): ",filtered)
-               except Exception as e:
-                   print(colored("404 Not Found - Error\n\n", warning, attrs=['bold']))
-                   if DEBUG:
-                       print(logging.exception("Stack:"))
-                       exit(1)
-                   gethelp()
-            """
     except Exception as e:
         print(colored("Unrecoverable Error", warning, attrs=['bold']))
         if DEBUG: print(colored(logging.exception("Stack:"), 'green'))
+        exit(1)
 
