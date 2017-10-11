@@ -157,7 +157,7 @@ def getmetadata(url=metadataurl):
     try:
         req = request("GET",url)
         if not req.ok:
-            raise
+            raise ValueError(req.status_code)
         if DEBUG: 
             print("GETMETADATA: ", req, req.text)
         return req.text.split('\n') 
@@ -165,9 +165,7 @@ def getmetadata(url=metadataurl):
         print(colored("404 Not Found - Error\n\n", warning, attrs=['bold']))
         if DEBUG:
             print(logging.exception("Stack:"))
-            exit(1)
-        gethelp()
-        raise
+        raise ValueError("404 Not Found")
 
 class SuggestMetadata(AutoSuggest):
     """
@@ -320,7 +318,11 @@ def metadatadump(words=[], path=None):
         print(path)
 
     if path:
-        result=getmetadata(metadataurl+"/"+path)
+        try:
+            result=getmetadata(metadataurl+"/"+path)
+        except ValueError:
+            print(colored("Warning: could not fetch metadata "+path, warning))
+            return ["ERROR"] 
         for i in result:
             if i.endswith("/") and "public_keys" not in i:
                 words.append({i:metadatadump(words, path+"/"+i)})
@@ -329,7 +331,11 @@ def metadatadump(words=[], path=None):
         return words
 
     if not path:
-        result=getmetadata()
+        try:
+            result=getmetadata()
+        except:
+            print(colored("Warning: could not fetch metadata "+path, warning))
+            return ["ERROR"] 
         for i in result:
             if i.endswith("/"):
                 words.append({i:metadatadump(words, i)})
