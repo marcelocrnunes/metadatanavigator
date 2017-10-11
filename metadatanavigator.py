@@ -155,6 +155,15 @@ def getmetadata(url=metadataurl):
     if DEBUG:
         print("GETMETADATA URL:", url)
     try:
+
+        """ This is a hack for a special case of values with an = """
+        if "=" in url:
+            temp=url.split("/")
+            for i, t in enumerate(temp):
+                if "=" in t:
+                    temp[i]=t.split("=")[0]
+            url="/".join(temp)
+
         req = request("GET",url)
         if not req.ok:
             raise ValueError(req.status_code)
@@ -292,6 +301,15 @@ def pipemode(pipemodepath="/"):
     """
     global JSON
     global COLOR
+
+    """ This is a hack for a special case of values with an = """
+    if "=" in pipemodepath:
+        temp=pipemodepath.split("/")
+        for i, t in enumerate(temp):
+            if "=" in t:
+                temp[i]=t.split("=")[0]
+        pipemodepath="/".join(temp)
+
     try:
         words=getmetadata(metadataurl+"/"+pipemodepath)
         if JSON:
@@ -313,21 +331,33 @@ def metadatadump(words=[], path=None):
     """
     This function will navigate recursively through all metadata. 
     """
+
     if DEBUG:
         print(words)
         print(path)
 
-    if path:
+    result=getmetadata()
+    for i in result:
+        words.append({i:getmetadata(metadataurl+"/"+i).pop()})
+
+    return words
+
+
+"""    if path:
+
         try:
             result=getmetadata(metadataurl+"/"+path)
         except ValueError:
             print(colored("Warning: could not fetch metadata "+path, warning))
             return ["ERROR"] 
+
         for i in result:
-            if i.endswith("/") and "public_keys" not in i:
-                words.append({i:metadatadump(words, path+"/"+i)})
+            if i.endswith("/"):
+#                words[path][i]=metadatadump(words, path+"/"+i)
+                  pass
             else:
-                words.append({i:getmetadata(metadataurl+"/"+path+"/"+i).pop()})
+                words[path][i]=getmetadata(metadataurl+"/"+path+"/"+i).pop()
+
         return words
 
     if not path:
@@ -338,15 +368,12 @@ def metadatadump(words=[], path=None):
             return ["ERROR"] 
         for i in result:
             if i.endswith("/"):
-                words.append({i:metadatadump(words, i)})
+                words[i]={}
+                words=metadatadump(words, i)
             else:
-                words.append({i:getmetadata(metadataurl+"/"+i).pop()})
+                words[i]=getmetadata(metadataurl+"/"+i).pop()
         return words
-
-
-    
-    
-
+"""
 
 def processUserInput(user_input, meta, w, c):
     """
@@ -355,6 +382,14 @@ def processUserInput(user_input, meta, w, c):
     global colonfill
     global JSON
     global COLOR
+
+    """ This is a hack for a special case of values with an = """
+    if "=" in user_input:
+        temp=user_input.split("/")
+        for i, t in enumerate(temp):
+            if "=" in t:
+                temp[i]=t.split("=")[0]
+        user_input="/".join(temp)
 
     try:
 

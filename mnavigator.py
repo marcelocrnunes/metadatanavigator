@@ -4,6 +4,7 @@ This script will handle the initial configuration using command line arguments a
 Once all configuration are set, the script will call the mnavigator function, imported from metadatanavigator, with the parameters configured by the user.
 """
 from metadatanavigator import *
+import json
 import yaml
 import argparse
 
@@ -63,7 +64,8 @@ def main():
 
         if args.all:
             """Dump all metadata"""
-            print(metadatadump())
+            result=metadatadump()
+            print(result)
             exit(0)
 
         """
