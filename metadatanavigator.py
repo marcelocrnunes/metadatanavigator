@@ -152,6 +152,8 @@ def getmetadata(url=metadataurl):
     """
     Call the metadata api at url and return a list of text results from the request call to the Metadata api. 
     """
+    if DEBUG:
+        print("GETMETADATA URL:", url)
     try:
         req = request("GET",url)
         if not req.ok:
@@ -308,6 +310,37 @@ def pipemode(pipemodepath="/"):
         return True
     except:
         return False
+
+def metadatadump(words=[], path=None):
+    """
+    This function will navigate recursively through all metadata. 
+    """
+    if DEBUG:
+        print(words)
+        print(path)
+
+    if path:
+        result=getmetadata(metadataurl+"/"+path)
+        for i in result:
+            if i.endswith("/") and "public_keys" not in i:
+                words.append({i:metadatadump(words, path+"/"+i)})
+            else:
+                words.append({i:getmetadata(metadataurl+"/"+path+"/"+i).pop()})
+        return words
+
+    if not path:
+        result=getmetadata()
+        for i in result:
+            if i.endswith("/"):
+                words.append({i:metadatadump(words, i)})
+            else:
+                words.append({i:getmetadata(metadataurl+"/"+i).pop()})
+        return words
+
+
+    
+    
+
 
 def processUserInput(user_input, meta, w, c):
     """

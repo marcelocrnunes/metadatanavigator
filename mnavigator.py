@@ -16,6 +16,7 @@ def create_parser():
     parser.add_argument("-d", "--debug", help="Debug Mode", action="store_true")
     parser.add_argument("-j", "--json", help="JSON output mode", action="store_true")
     parser.add_argument("-c", "--color", help="COLOR output mode", action="store_true")
+    parser.add_argument("-a", "--all", help="Dump all metadata", action="store_true")
     parser.add_argument("-C", "--config", help="Config file path [default mnavigator.yaml]",nargs='?',const="mnavigator.yaml", default="mnavigator.yaml")
     parser.add_argument("-p", "--path", help="Metadata PATH for pipe output mode [Disables INTERATIVE mode][DEFAULT ROOT]",nargs='?', const="/")
     args=parser.parse_args()
@@ -59,6 +60,11 @@ def main():
             """Disable PIPE mode"""
             pipemode=False
             pipemodepath=None
+
+        if args.all:
+            """Dump all metadata"""
+            print(metadatadump())
+            exit(0)
 
         """
         Setup the rest of the configuration, like colors for the prompt and texts.
