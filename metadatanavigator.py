@@ -327,15 +327,23 @@ def pipemode(pipemodepath="/"):
     except:
         return False
 
-def recursivemetadata(url, current=[]):
+def recursivemetadata(url): 
+    """
+      From the url, recursively call the metadata api. 
+    """
 
+    if DEBUG:
+        print("URL:",url)
+    retorno=[]
     result=getmetadata(url)
     for i in result:
         if not any(x in i for x in ["/","="]):
-            current.append({url:{i:getmetadata(url+"/"+i).pop()}})
-            return current
+            formatted=''.join(getmetadata(url+"/"+i))
+            retorno.append({i:formatted})
         else:
-            return recursivemetadata(url+i,current)
+            r,u=recursivemetadata(url+"/"+i)
+            retorno.append({url+"/"+i:r})
+    return retorno,url
 
 def metadatadump():
     """
@@ -343,18 +351,21 @@ def metadatadump():
     """
     words=[]
 
+
     if DEBUG:
         print(words)
-        print(path)
 
     result=getmetadata()
     for i in result:
         if not any(x in i for x in ["/","="]):
             words.append({i:getmetadata(metadataurl+"/"+i).pop()})
         else:
-            words.append(recursivemetadata(metadataurl+"/"+i))
-
-    return json.dumps(words,indent=2)
+            resultado, url=(recursivemetadata(metadataurl+"/"+i))
+            words.append({url:resultado})
+    if JSON:
+        return json.dumps(words,indent=2)
+    else:
+        return words
 
 
 """    if path:
