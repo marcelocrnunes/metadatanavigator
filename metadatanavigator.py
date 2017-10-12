@@ -95,8 +95,12 @@ Press "Ctrl-t" to toggle json mode (-j option on the commandline)
 Press "Ctrl-y" to toggle color mode (-c option on the commandline)
 
 PIPE MODE:
-Call the command with the "-p" argument. Call the command with "-h" for usage help.
+Call the command with the "-p" argument. 
 
+DUMP all metadata: 
+Call the command with the "-a" argument.
+
+Call the command with "-h" for usage help.
     """
     print(colored("Metadata Navigator\n===================", warning, attrs=['bold']))
     print(colored(HELP, detail))

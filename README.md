@@ -4,8 +4,9 @@ Use this tool to navigate and query your AWS EC2 instance's metadata.
 
 ## Getting Started
 ```
+```
 ./mnavigator.py -h
-usage: mnavigator.py [-h] [-d] [-j] [-c] [-C [CONFIG]] [-p [PATH]]
+usage: mnavigator.py [-h] [-d] [-j] [-c] [-a] [-C [CONFIG]] [-p [PATH]]
 
 A tool to navigate through AWS EC2 instance metadata
 
@@ -14,14 +15,14 @@ optional arguments:
   -d, --debug           Debug Mode
   -j, --json            JSON output mode
   -c, --color           COLOR output mode
+  -a, --all             Dump all metadata
   -C [CONFIG], --config [CONFIG]
                         Config file path [default mnavigator.yaml]
   -p [PATH], --path [PATH]
                         Metadata PATH for pipe output mode [Disables
                         INTERATIVE mode][DEFAULT ROOT]
-```
 
-```
+`````
 ./mnavigator.py
 Metadata Navigator
 ===================
@@ -38,8 +39,13 @@ Press "Ctrl-t" to toggle json mode (-j option on the commandline)
 Press "Ctrl-y" to toggle color mode (-c option on the commandline)
 
 PIPE MODE:
-Call the command with the "-p" argument. Call the command with "-h" for usage help.
-```
+Call the command with the "-p" argument. 
+
+DUMP all metadata: 
+Call the command with the "-a" argument.
+
+Call the command with "-h" for usage help.
+``
 
 For a more in depth view of the tool: 
 
