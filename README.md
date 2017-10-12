@@ -4,7 +4,6 @@ Use this tool to navigate and query your AWS EC2 instance's metadata.
 
 ## Getting Started
 ```
-```
 ./mnavigator.py -h
 usage: mnavigator.py [-h] [-d] [-j] [-c] [-a] [-C [CONFIG]] [-p [PATH]]
 
@@ -22,7 +21,9 @@ optional arguments:
                         Metadata PATH for pipe output mode [Disables
                         INTERATIVE mode][DEFAULT ROOT]
 
-`````
+```
+
+```
 ./mnavigator.py
 Metadata Navigator
 ===================
@@ -45,7 +46,7 @@ DUMP all metadata:
 Call the command with the "-a" argument.
 
 Call the command with "-h" for usage help.
-``
+```
 
 For a more in depth view of the tool: 
 
